@@ -176,6 +176,10 @@ class Board {
 
     return availablePositions;
   }
+
+  public getPositionsMatrix(): Array<Array<string>> {
+    return this.positions;
+  }
 }
 
 export class Session {
@@ -223,6 +227,14 @@ export class Session {
 
   public hasPlayer(playerId: string) {
     return this.playersById.has(playerId);
+  }
+
+  public getGameState() {
+    return {
+      board: this.board.getPositionsMatrix(),
+      state: this.game.getState(),
+      currentPlayer: this.game.getCurrentPlayer()
+    };
   }
 }
 

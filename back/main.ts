@@ -14,11 +14,7 @@ io.on("connection", socket => {
   let playerId = socket.handshake.query.playerId as string || randomUUID()
 
   socket.on("joinRoom", room => {
-    let session = sessionByRoom.get(room.name);
-    if (session == null) {
-      session = new Session();
-      sessionByRoom.set(room.name, session);
-    }
+    let session = findOrCreateSession(room.name);
 
     let player = session.getPlayerById(playerId);
     if (player != null){
@@ -30,17 +26,33 @@ io.on("connection", socket => {
   });
 
   socket.on("makeMove", event => {
-    console.log(event);
-    const session = sessionByRoom.get(event.room)
+    const { room, player, position } = event;
+
+    const session = sessionByRoom.get(room.name)
     if (session == null) {
       throw new Error("vai toma no cu");
     }
 
-    session.makeMove(event.player.id, event.position)
+    try {
+      session.makeMove(player.id, position)
+      io.to(room.name).emit("update", session.getGameState())
+    } catch (err) {
+      console.error(err)
+    }
   })
 
   socket.on("disconnect", event => console.log("E morreu"));
 });
+
+function findOrCreateSession(roomId: string): Session {
+  let session = sessionByRoom.get(roomId);
+  if (session == null) {
+    session = new Session();
+    sessionByRoom.set(roomId, session);
+  }
+
+  return session;
+}
 
 function joinRoom(socket: Socket, roomId: string, player: Player) {
   socket.join(roomId);
