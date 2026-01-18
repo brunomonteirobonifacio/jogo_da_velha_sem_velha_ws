@@ -1,0 +1,1864 @@
+Getting logs for all jobs in run 20528054423...
+
+=== Job: linkChecker (ID: 58974851605) ===
+﻿2025-12-26T19:21:14.1719342Z Current runner version: '2.330.0'
+2025-12-26T19:21:14.1743268Z ##[group]Runner Image Provisioner
+2025-12-26T19:21:14.1744109Z Hosted Compute Agent
+2025-12-26T19:21:14.1744636Z Version: 20251211.462
+2025-12-26T19:21:14.1745355Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
+2025-12-26T19:21:14.1746041Z Build Date: 2025-12-11T16:28:49Z
+2025-12-26T19:21:14.1746688Z Worker ID: {e618f8c7-f580-4303-83d6-4f47a68a6188}
+2025-12-26T19:21:14.1747471Z ##[endgroup]
+2025-12-26T19:21:14.1747974Z ##[group]Operating System
+2025-12-26T19:21:14.1748524Z Ubuntu
+2025-12-26T19:21:14.1749041Z 24.04.3
+2025-12-26T19:21:14.1749531Z LTS
+2025-12-26T19:21:14.1749962Z ##[endgroup]
+2025-12-26T19:21:14.1750586Z ##[group]Runner Image
+2025-12-26T19:21:14.1751484Z Image: ubuntu-24.04
+2025-12-26T19:21:14.1752000Z Version: 20251215.174.1
+2025-12-26T19:21:14.1753113Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251215.174/images/ubuntu/Ubuntu2404-Readme.md
+2025-12-26T19:21:14.1754618Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251215.174
+2025-12-26T19:21:14.1755737Z ##[endgroup]
+2025-12-26T19:21:14.1756740Z ##[group]GITHUB_TOKEN Permissions
+2025-12-26T19:21:14.1759125Z Contents: read
+2025-12-26T19:21:14.1759738Z Metadata: read
+2025-12-26T19:21:14.1760223Z ##[endgroup]
+2025-12-26T19:21:14.1763303Z Secret source: Actions
+2025-12-26T19:21:14.1764266Z Prepare workflow directory
+2025-12-26T19:21:14.2084496Z Prepare all required actions
+2025-12-26T19:21:14.2122251Z Getting action download info
+2025-12-26T19:21:14.5044981Z Download action repository 'actions/checkout@v5' (SHA:93cb6efe18208431cddfb8368fd83d5badbf9bfd)
+2025-12-26T19:21:14.6595939Z Download action repository 'lycheeverse/lychee-action@a8c4c7cb88f0c7386610c35eb25108e448569cb0' (SHA:a8c4c7cb88f0c7386610c35eb25108e448569cb0)
+2025-12-26T19:21:15.0319859Z Complete job name: linkChecker
+2025-12-26T19:21:15.0997999Z ##[group]Run actions/checkout@v5
+2025-12-26T19:21:15.0998826Z with:
+2025-12-26T19:21:15.0999242Z   persist-credentials: false
+2025-12-26T19:21:15.0999741Z   repository: fastify/fastify
+2025-12-26T19:21:15.1000372Z   token: ***
+2025-12-26T19:21:15.1000938Z   ssh-strict: true
+2025-12-26T19:21:15.1001339Z   ssh-user: git
+2025-12-26T19:21:15.1001729Z   clean: true
+2025-12-26T19:21:15.1002134Z   sparse-checkout-cone-mode: true
+2025-12-26T19:21:15.1002631Z   fetch-depth: 1
+2025-12-26T19:21:15.1003022Z   fetch-tags: false
+2025-12-26T19:21:15.1003429Z   show-progress: true
+2025-12-26T19:21:15.1003834Z   lfs: false
+2025-12-26T19:21:15.1004216Z   submodules: false
+2025-12-26T19:21:15.1004623Z   set-safe-directory: true
+2025-12-26T19:21:15.1005310Z ##[endgroup]
+2025-12-26T19:21:15.1982457Z Syncing repository: fastify/fastify
+2025-12-26T19:21:15.1985166Z ##[group]Getting Git version info
+2025-12-26T19:21:15.1986342Z Working directory is '/home/runner/work/fastify/fastify'
+2025-12-26T19:21:15.1988139Z [command]/usr/bin/git version
+2025-12-26T19:21:15.2073517Z git version 2.52.0
+2025-12-26T19:21:15.2095989Z ##[endgroup]
+2025-12-26T19:21:15.2111417Z Temporarily overriding HOME='/home/runner/work/_temp/6b5cd5cf-f35e-427d-9108-39bf8d74611c' before making global git config changes
+2025-12-26T19:21:15.2115080Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-26T19:21:15.2117291Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/fastify/fastify
+2025-12-26T19:21:15.2159217Z Deleting the contents of '/home/runner/work/fastify/fastify'
+2025-12-26T19:21:15.2163757Z ##[group]Initializing the repository
+2025-12-26T19:21:15.2167636Z [command]/usr/bin/git init /home/runner/work/fastify/fastify
+2025-12-26T19:21:15.2283408Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-12-26T19:21:15.2284491Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2025-12-26T19:21:15.2285448Z hint: to use in all of your new repositories, which will suppress this warning,
+2025-12-26T19:21:15.2286436Z hint: call:
+2025-12-26T19:21:15.2287101Z hint:
+2025-12-26T19:21:15.2288027Z hint: 	git config --global init.defaultBranch <name>
+2025-12-26T19:21:15.2288842Z hint:
+2025-12-26T19:21:15.2289833Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-12-26T19:21:15.2291714Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-12-26T19:21:15.2293000Z hint:
+2025-12-26T19:21:15.2293702Z hint: 	git branch -m <name>
+2025-12-26T19:21:15.2294511Z hint:
+2025-12-26T19:21:15.2295505Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-12-26T19:21:15.2297140Z Initialized empty Git repository in /home/runner/work/fastify/fastify/.git/
+2025-12-26T19:21:15.2299858Z [command]/usr/bin/git remote add origin https://github.com/fastify/fastify
+2025-12-26T19:21:15.2367834Z ##[endgroup]
+2025-12-26T19:21:15.2368773Z ##[group]Disabling automatic garbage collection
+2025-12-26T19:21:15.2372107Z [command]/usr/bin/git config --local gc.auto 0
+2025-12-26T19:21:15.2401517Z ##[endgroup]
+2025-12-26T19:21:15.2402749Z ##[group]Setting up auth
+2025-12-26T19:21:15.2408443Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-26T19:21:15.2438800Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-26T19:21:15.2798190Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-26T19:21:15.2828911Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-26T19:21:15.3041646Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-26T19:21:15.3072313Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-26T19:21:15.3286142Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-12-26T19:21:15.3319153Z ##[endgroup]
+2025-12-26T19:21:15.3320491Z ##[group]Fetching the repository
+2025-12-26T19:21:15.3328992Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +87fb0d7805bcb8096826d27294d9893a37988eea:refs/remotes/pull/6425/merge
+2025-12-26T19:21:15.6605137Z From https://github.com/fastify/fastify
+2025-12-26T19:21:15.6606781Z  * [new ref]         87fb0d7805bcb8096826d27294d9893a37988eea -> pull/6425/merge
+2025-12-26T19:21:15.6637863Z ##[endgroup]
+2025-12-26T19:21:15.6641625Z ##[group]Determining the checkout info
+2025-12-26T19:21:15.6643064Z ##[endgroup]
+2025-12-26T19:21:15.6646846Z [command]/usr/bin/git sparse-checkout disable
+2025-12-26T19:21:15.6690207Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-12-26T19:21:15.6717414Z ##[group]Checking out the ref
+2025-12-26T19:21:15.6721830Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/6425/merge
+2025-12-26T19:21:15.6979911Z Note: switching to 'refs/remotes/pull/6425/merge'.
+2025-12-26T19:21:15.6982844Z 
+2025-12-26T19:21:15.6983809Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-12-26T19:21:15.6986148Z changes and commit them, and you can discard any commits you make in this
+2025-12-26T19:21:15.6988405Z state without impacting any branches by switching back to a branch.
+2025-12-26T19:21:15.6989771Z 
+2025-12-26T19:21:15.6990692Z If you want to create a new branch to retain commits you create, you may
+2025-12-26T19:21:15.6993060Z do so (now or later) by using -c with the switch command. Example:
+2025-12-26T19:21:15.6994286Z 
+2025-12-26T19:21:15.6994795Z   git switch -c <new-branch-name>
+2025-12-26T19:21:15.6995690Z 
+2025-12-26T19:21:15.6996175Z Or undo this operation with:
+2025-12-26T19:21:15.6996923Z 
+2025-12-26T19:21:15.6997339Z   git switch -
+2025-12-26T19:21:15.6997923Z 
+2025-12-26T19:21:15.6999213Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-12-26T19:21:15.7000954Z 
+2025-12-26T19:21:15.7002784Z HEAD is now at 87fb0d7 Merge d066762fcd0c388f99bc278fad3c98dfad94a761 into 5317c9068a43a02b671cd6df7392dd45a9aabaac
+2025-12-26T19:21:15.7007824Z ##[endgroup]
+2025-12-26T19:21:15.7037393Z [command]/usr/bin/git log -1 --format=%H
+2025-12-26T19:21:15.7059509Z 87fb0d7805bcb8096826d27294d9893a37988eea
+2025-12-26T19:21:15.7070117Z ##[group]Removing auth
+2025-12-26T19:21:15.7074678Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-26T19:21:15.7105440Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-26T19:21:15.7324634Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-26T19:21:15.7344683Z http.https://github.com/.extraheader
+2025-12-26T19:21:15.7352437Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-12-26T19:21:15.7382692Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-26T19:21:15.7593298Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-26T19:21:15.7620448Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-26T19:21:15.7832185Z ##[endgroup]
+2025-12-26T19:21:15.8319733Z ##[group]Run lycheeverse/lychee-action@a8c4c7cb88f0c7386610c35eb25108e448569cb0
+2025-12-26T19:21:15.8321577Z with:
+2025-12-26T19:21:15.8322360Z   fail: true
+2025-12-26T19:21:15.8323374Z   args: --offline --verbose --no-progress './**/*.md'
+2025-12-26T19:21:15.8324620Z   debug: false
+2025-12-26T19:21:15.8325445Z   failIfEmpty: true
+2025-12-26T19:21:15.8326330Z   format: markdown
+2025-12-26T19:21:15.8327184Z   jobSummary: true
+2025-12-26T19:21:15.8328061Z   lycheeVersion: v0.21.0
+2025-12-26T19:21:15.8329022Z   output: lychee/out.md
+2025-12-26T19:21:15.8329922Z   checkbox: true
+2025-12-26T19:21:15.8331176Z   token: ***
+2025-12-26T19:21:15.8332014Z   workingDirectory: .
+2025-12-26T19:21:15.8332891Z env:
+2025-12-26T19:21:15.8333941Z   GITHUB_TOKEN: ***
+2025-12-26T19:21:15.8334786Z ##[endgroup]
+2025-12-26T19:21:15.8444209Z ##[group]Run echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+2025-12-26T19:21:15.8445668Z [36;1mecho "$HOME/.local/bin" >> "$GITHUB_PATH"[0m
+2025-12-26T19:21:15.8446950Z [36;1mmkdir -p "$HOME/.local/bin"[0m
+2025-12-26T19:21:15.8485295Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-12-26T19:21:15.8486605Z env:
+2025-12-26T19:21:15.8487663Z   GITHUB_TOKEN: ***
+2025-12-26T19:21:15.8488461Z ##[endgroup]
+2025-12-26T19:21:15.8706742Z ##[group]Run # Remove any existing lychee binary to prevent conflicts
+2025-12-26T19:21:15.8708548Z [36;1m# Remove any existing lychee binary to prevent conflicts[0m
+2025-12-26T19:21:15.8709972Z [36;1mrm -f "$HOME/.local/bin/lychee"[0m
+2025-12-26T19:21:15.8744420Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-12-26T19:21:15.8745713Z env:
+2025-12-26T19:21:15.8746792Z   GITHUB_TOKEN: ***
+2025-12-26T19:21:15.8747591Z ##[endgroup]
+2025-12-26T19:21:15.8869926Z ##[group]Run # Create a temporary directory for downloads and extraction
+2025-12-26T19:21:15.8871864Z [36;1m# Create a temporary directory for downloads and extraction[0m
+2025-12-26T19:21:15.8873437Z [36;1mTEMP_DIR="${RUNNER_TEMP}/lychee-download"[0m
+2025-12-26T19:21:15.8874648Z [36;1mmkdir -p "${TEMP_DIR}"[0m
+2025-12-26T19:21:15.8875613Z [36;1mcd "${TEMP_DIR}"[0m
+2025-12-26T19:21:15.8876461Z [36;1m[0m
+2025-12-26T19:21:15.8877184Z [36;1mARCH=$(uname -m)[0m
+2025-12-26T19:21:15.8878330Z [36;1m# Determine filename and download URL based on version[0m
+2025-12-26T19:21:15.8879886Z [36;1mif [[ "${LYCHEE_VERSION}" =~ ^v0\.0|^v0\.1[0-5]\. ]]; then[0m
+2025-12-26T19:21:15.8881889Z [36;1m  FILENAME="lychee-${LYCHEE_VERSION}-${ARCH}-unknown-linux-gnu.tar.gz"[0m
+2025-12-26T19:21:15.8884285Z [36;1m  DOWNLOAD_URL="https://github.com/lycheeverse/lychee/releases/download/${LYCHEE_VERSION}/${FILENAME}"[0m
+2025-12-26T19:21:15.8886195Z [36;1melse[0m
+2025-12-26T19:21:15.8887198Z [36;1m  FILENAME="lychee-${ARCH}-unknown-linux-gnu.tar.gz"[0m
+2025-12-26T19:21:15.8888614Z [36;1m  if [[ "${LYCHEE_VERSION}" == 'nightly' ]]; then[0m
+2025-12-26T19:21:15.8890520Z [36;1m    DOWNLOAD_URL="https://github.com/lycheeverse/lychee/releases/download/nightly/${FILENAME}"[0m
+2025-12-26T19:21:15.8892640Z [36;1m  elif [[ "${LYCHEE_VERSION}" == 'latest' ]]; then[0m
+2025-12-26T19:21:15.8894545Z [36;1m    DOWNLOAD_URL="https://github.com/lycheeverse/lychee/releases/latest/download/${FILENAME}"[0m
+2025-12-26T19:21:15.8896301Z [36;1m  else[0m
+2025-12-26T19:21:15.8898050Z [36;1m    DOWNLOAD_URL="https://github.com/lycheeverse/lychee/releases/download/lychee-${LYCHEE_VERSION}/${FILENAME}"[0m
+2025-12-26T19:21:15.8900043Z [36;1m  fi[0m
+2025-12-26T19:21:15.8900754Z [36;1mfi[0m
+2025-12-26T19:21:15.8901743Z [36;1m[0m
+2025-12-26T19:21:15.8902601Z [36;1mecho "Downloading from: ${DOWNLOAD_URL}"[0m
+2025-12-26T19:21:15.8903765Z [36;1mcurl -sfLO "${DOWNLOAD_URL}"[0m
+2025-12-26T19:21:15.8904742Z [36;1m[0m
+2025-12-26T19:21:15.8905499Z [36;1mecho "Extracting ${FILENAME}"[0m
+2025-12-26T19:21:15.8906533Z [36;1mtar -xvzf "${FILENAME}"[0m
+2025-12-26T19:21:15.8907460Z [36;1m[0m
+2025-12-26T19:21:15.8908342Z [36;1m# Output temp directory for use in later steps[0m
+2025-12-26T19:21:15.8909862Z [36;1mecho "temp_dir=${TEMP_DIR}" >> $GITHUB_OUTPUT[0m
+2025-12-26T19:21:15.8941388Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-12-26T19:21:15.8942635Z env:
+2025-12-26T19:21:15.8943725Z   GITHUB_TOKEN: ***
+2025-12-26T19:21:15.8944537Z   LYCHEE_VERSION: v0.21.0
+2025-12-26T19:21:15.8945373Z ##[endgroup]
+2025-12-26T19:21:15.9031640Z Downloading from: https://github.com/lycheeverse/lychee/releases/download/lychee-v0.21.0/lychee-x86_64-unknown-linux-gnu.tar.gz
+2025-12-26T19:21:16.0869315Z Extracting lychee-x86_64-unknown-linux-gnu.tar.gz
+2025-12-26T19:21:16.0897693Z lychee
+2025-12-26T19:21:16.2690006Z docs/
+2025-12-26T19:21:16.2691269Z docs/README.md
+2025-12-26T19:21:16.2691725Z docs/PRE_COMMIT.md
+2025-12-26T19:21:16.2692405Z docs/lychee.1
+2025-12-26T19:21:16.2692757Z docs/TROUBLESHOOTING.md
+2025-12-26T19:21:16.2765002Z ##[group]Run # Install lychee from the temporary directory
+2025-12-26T19:21:16.2765426Z [36;1m# Install lychee from the temporary directory[0m
+2025-12-26T19:21:16.2765966Z [36;1minstall -t "$HOME/.local/bin" -D "/home/runner/work/_temp/lychee-download/lychee"[0m
+2025-12-26T19:21:16.2798659Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-12-26T19:21:16.2799024Z env:
+2025-12-26T19:21:16.2799513Z   GITHUB_TOKEN: ***
+2025-12-26T19:21:16.2799758Z ##[endgroup]
+2025-12-26T19:21:16.3170256Z ##[group]Run /home/runner/work/_actions/lycheeverse/lychee-action/a8c4c7cb88f0c7386610c35eb25108e448569cb0/entrypoint.sh
+2025-12-26T19:21:16.3171365Z [36;1m/home/runner/work/_actions/lycheeverse/lychee-action/a8c4c7cb88f0c7386610c35eb25108e448569cb0/entrypoint.sh[0m
+2025-12-26T19:21:16.3201624Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-12-26T19:21:16.3201976Z env:
+2025-12-26T19:21:16.3202389Z   GITHUB_TOKEN: ***
+2025-12-26T19:21:16.3202715Z   INPUT_TOKEN: ***
+2025-12-26T19:21:16.3203003Z   INPUT_ARGS: --offline --verbose --no-progress './**/*.md'
+2025-12-26T19:21:16.3203348Z   INPUT_DEBUG: false
+2025-12-26T19:21:16.3203572Z   INPUT_FAIL: true
+2025-12-26T19:21:16.3203826Z   INPUT_FAILIFEMPTY: true
+2025-12-26T19:21:16.3204080Z   INPUT_FORMAT: markdown
+2025-12-26T19:21:16.3204322Z   INPUT_JOBSUMMARY: true
+2025-12-26T19:21:16.3204562Z   INPUT_CHECKBOX: true
+2025-12-26T19:21:16.3204792Z   INPUT_OUTPUT: lychee/out.md
+2025-12-26T19:21:16.3205045Z ##[endgroup]
+2025-12-26T19:21:16.4805331Z [EXCLUDED] https://github.com/fastify/.github/blob/main/CODE_OF_CONDUCT.md
+2025-12-26T19:21:16.4806797Z [EXCLUDED] https://github.com/fastify/.github/blob/main/GOVERNANCE.md
+2025-12-26T19:21:16.4808000Z [EXCLUDED] https://help.github.com/en/articles/securing-your-account-with-two-factor-authentication-2fa
+2025-12-26T19:21:16.4809055Z [EXCLUDED] https://semver.org/
+2025-12-26T19:21:16.4809597Z [EXCLUDED] https://github.com/fastify/fastify#team
+2025-12-26T19:21:16.4810330Z [EXCLUDED] https://github.com/orgs/fastify/discussions/categories/announcements
+2025-12-26T19:21:16.4811397Z [EXCLUDED] https://github.com/fastify/fastify/tree/1.x
+2025-12-26T19:21:16.4812201Z [EXCLUDED] https://docs.npmjs.com/about-two-factor-authentication
+2025-12-26T19:21:16.4812961Z [200] file:///home/runner/work/fastify/fastify/README.md
+2025-12-26T19:21:16.4813723Z [EXCLUDED] https://github.com/fastify/website/blob/HEAD/static/data/team.yml
+2025-12-26T19:21:16.4814584Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Contributing.md
+2025-12-26T19:21:16.4815148Z [EXCLUDED] https://github.com/fastify/releasify
+2025-12-26T19:21:16.4815774Z [EXCLUDED] https://github.com/fastify/org-admin?tab=readme-ov-file#org-admin
+2025-12-26T19:21:16.4816533Z [EXCLUDED] https://www.npmjs.com/org/fastify
+2025-12-26T19:21:16.4817163Z [200] file:///home/runner/work/fastify/fastify/GOVERNANCE.md
+2025-12-26T19:21:16.4817868Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/LTS.md
+2025-12-26T19:21:16.4818442Z [EXCLUDED] https://github.com/fastify/website/pulls
+2025-12-26T19:21:16.4818820Z [EXCLUDED] https://github.com/fastify/fastify/tree/4.x
+2025-12-26T19:21:16.4819559Z [EXCLUDED] https://github.com/fastify/fastify/tree/3.x
+2025-12-26T19:21:16.4820281Z [EXCLUDED] https://github.com/fastify/fastify/pulls
+2025-12-26T19:21:16.4821139Z [200] file:///home/runner/work/fastify/fastify/package.json
+2025-12-26T19:21:16.4821851Z [EXCLUDED] https://github.com/fastify/fastify/tree/2.x
+2025-12-26T19:21:16.4822602Z [200] file:///home/runner/work/fastify/fastify/GOVERNANCE.md
+2025-12-26T19:21:16.4823339Z [EXCLUDED] https://opencollective.com/fastify/
+2025-12-26T19:21:16.4823995Z [EXCLUDED] https://github.com/sponsors/fastify
+2025-12-26T19:21:16.4824793Z [EXCLUDED] https://github.com/orgs/fastify/discussions/new?category=bounty
+2025-12-26T19:21:16.4825730Z [EXCLUDED] https://opencollective.com/fastify/expenses/new
+2025-12-26T19:21:16.4826490Z [EXCLUDED] https://github.com/orgs/fastify/discussions
+2025-12-26T19:21:16.4827399Z [EXCLUDED] https://github.com/openjs-foundation/community-fund/tree/main/programs/travel-fund
+2025-12-26T19:21:16.4828587Z [EXCLUDED] https://docs.oscollective.org/how-it-works/basics/invoice-and-reimbursement-examples
+2025-12-26T19:21:16.4829481Z [EXCLUDED] https://hackerone.com/fastify
+2025-12-26T19:21:16.4830313Z [EXCLUDED] https://github.com/nodejs/node/blob/main/SECURITY.md#the-nodejs-threat-model
+2025-12-26T19:21:16.4831402Z [EXCLUDED] https://docs.hackerone.com/hackers/disclosure.html
+2025-12-26T19:21:16.4832060Z [EXCLUDED] https://x.com/matteocollina
+2025-12-26T19:21:16.4832628Z [EXCLUDED] https://www.npmjs.com/~matteo.collina
+2025-12-26T19:21:16.4833090Z [EXCLUDED] https://x.com/delvedor
+2025-12-26T19:21:16.4833423Z [EXCLUDED] https://github.com/climba03003
+2025-12-26T19:21:16.4833971Z [EXCLUDED] https://x.com/jsumners79
+2025-12-26T19:21:16.4834519Z [EXCLUDED] https://www.npmjs.com/~jsumners
+2025-12-26T19:21:16.4835303Z [EXCLUDED] https://docs.hackerone.com/hackers/submitting-reports.html
+2025-12-26T19:21:16.4836051Z [EXCLUDED] https://github.com/delvedor
+2025-12-26T19:21:16.4836775Z [EXCLUDED] https://github.com/fastify/fastify/security/advisories/new
+2025-12-26T19:21:16.4837547Z [EXCLUDED] https://www.npmjs.com/~delvedor
+2025-12-26T19:21:16.4838108Z [EXCLUDED] https://github.com/zekth
+2025-12-26T19:21:16.4838844Z [EXCLUDED] https://bestpractices.coreinfrastructure.org/projects/7585
+2025-12-26T19:21:16.4839706Z [EXCLUDED] https://docs.hackerone.com/hackers/severity.html
+2025-12-26T19:21:16.4841271Z [EXCLUDED] https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam#reporting-an-issue-or-pull-request
+2025-12-26T19:21:16.4842836Z [EXCLUDED] https://www.first.org/cvss/user-guide
+2025-12-26T19:21:16.4843468Z [EXCLUDED] https://github.com/jsumners
+2025-12-26T19:21:16.4844042Z [EXCLUDED] https://github.com/mcollina
+2025-12-26T19:21:16.4844830Z [EXCLUDED] https://bestpractices.coreinfrastructure.org/projects/7585/badge
+2025-12-26T19:21:16.4845660Z [EXCLUDED] https://opencollective.com/valtown
+2025-12-26T19:21:16.4846915Z [EXCLUDED] https://handsontable.com/docs/react-data-grid/?utm_source=Fastify_GH&utm_medium=sponsorship&utm_campaign=library_sponsorship_2024
+2025-12-26T19:21:16.4848328Z [EXCLUDED] https://lokalise.com/?utm_source=Fastify_GH&utm_medium=sponsorship
+2025-12-26T19:21:16.4849117Z [EXCLUDED] https://www.lambdatest.com/
+2025-12-26T19:21:16.4849717Z [EXCLUDED] https://opencollective.com/fastify
+2025-12-26T19:21:16.4850364Z [EXCLUDED] https://github.com/sponsors/fastify
+2025-12-26T19:21:16.4851223Z [EXCLUDED] https://github.com/mercedes-benz
+2025-12-26T19:21:16.4851911Z [EXCLUDED] https://github.com/mcollina/autocannon
+2025-12-26T19:21:16.4852642Z [EXCLUDED] https://github.com/open-cli-tools/concurrently
+2025-12-26T19:21:16.4853303Z [EXCLUDED] https://github.com/npm/npx
+2025-12-26T19:21:16.4853930Z [EXCLUDED] https://github.com/StarpTech/branch-comparer
+2025-12-26T19:21:16.4854986Z [EXCLUDED] https://www.npmjs.com/package/migrate-mongo
+2025-12-26T19:21:16.4855714Z [EXCLUDED] https://github.com/fastify/fastify-leveldb
+2025-12-26T19:21:16.4856395Z [EXCLUDED] https://github.com/fastify/fastify-redis
+2025-12-26T19:21:16.4857326Z [EXCLUDED] https://github.com/fastify/fastify-mysql
+2025-12-26T19:21:16.4858053Z [EXCLUDED] https://github.com/fastify/fastify-postgres
+2025-12-26T19:21:16.4858878Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md
+2025-12-26T19:21:16.4859705Z [EXCLUDED] https://github.com/fastify/fastify-mongodb
+2025-12-26T19:21:16.4860334Z [EXCLUDED] https://knexjs.org/
+2025-12-26T19:21:16.4861111Z [EXCLUDED] https://www.npmjs.com/package/postgrator
+2025-12-26T19:21:16.4862117Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Contributing.md#using-visual-studio-code
+2025-12-26T19:21:16.4863442Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Contributing.md#ground-rules--expectations
+2025-12-26T19:21:16.4864756Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Contributing.md#setting-up-your-environment
+2025-12-26T19:21:16.4865769Z [EXCLUDED] https://github.com/fastify/fastify/issues
+2025-12-26T19:21:16.4866396Z [EXCLUDED] https://standardjs.com/
+2025-12-26T19:21:16.4867130Z [EXCLUDED] https://en.wikipedia.org/wiki/Developer_Certificate_of_Origin
+2025-12-26T19:21:16.4868031Z [EXCLUDED] https://gitpod.io/#https://github.com/fastify/fastify
+2025-12-26T19:21:16.4868792Z [EXCLUDED] https://github.com/fastify/fastify/pulls
+2025-12-26T19:21:16.4869591Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/CONTRIBUTING.md
+2025-12-26T19:21:16.4870610Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Contributing.md#table-of-contents
+2025-12-26T19:21:16.4871955Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Contributing.md#how-to-contribute
+2025-12-26T19:21:16.4872887Z [EXCLUDED] https://gitpod.io/button/open-in-gitpod.svg
+2025-12-26T19:21:16.4873675Z [EXCLUDED] https://code.visualstudio.com/docs/editor/portable
+2025-12-26T19:21:16.4874426Z [EXCLUDED] https://code.visualstudio.com/download
+2025-12-26T19:21:16.4875342Z [EXCLUDED] https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+2025-12-26T19:21:16.4876304Z [EXCLUDED] https://github.com/fastify/fastify/discussions
+2025-12-26T19:21:16.4877233Z [EXCLUDED] https://github.com/fastify/fastify/issues?q=is%3Aissue+is%3Aopen+label%3Abug
+2025-12-26T19:21:16.4878560Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Contributing.md#types-of-contributions-were-looking-for
+2025-12-26T19:21:16.4879780Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/CODE_OF_CONDUCT.md
+2025-12-26T19:21:16.4881146Z [EXCLUDED] https://code.visualstudio.com/docs/getstarted/settings
+2025-12-26T19:21:16.4881992Z [200] file:///home/runner/work/fastify/fastify/CODE_OF_CONDUCT.md
+2025-12-26T19:21:16.4882709Z [EXCLUDED] https://openjsf.org/about/governance/
+2025-12-26T19:21:16.4883412Z [200] file:///home/runner/work/fastify/fastify/README.md#team
+2025-12-26T19:21:16.4884131Z [200] file:///home/runner/work/fastify/fastify/GOVERNANCE.md
+2025-12-26T19:21:16.4884761Z [EXCLUDED] https://openjsf.org/
+2025-12-26T19:21:16.4885356Z [200] file:///home/runner/work/fastify/fastify/CONTRIBUTING.md
+2025-12-26T19:21:16.4886116Z [EXCLUDED] https://nodejs.org/api/http.html#requestaborted
+2025-12-26T19:21:16.4886919Z [EXCLUDED] https://github.com/corsicanec82/fastify-method-override
+2025-12-26T19:21:16.4887652Z [EXCLUDED] https://www.npmjs.com/package/mqtt
+2025-12-26T19:21:16.4888280Z [EXCLUDED] https://github.com/Effect-TS/effect
+2025-12-26T19:21:16.4888924Z [EXCLUDED] https://github.com/Jnig/fastify-flux
+2025-12-26T19:21:16.4889598Z [EXCLUDED] https://github.com/matrus2/fastify-dynamodb
+2025-12-26T19:21:16.4890293Z [EXCLUDED] https://github.com/jsumners/fastify-no-icon
+2025-12-26T19:21:16.4891207Z [EXCLUDED] https://www.npmjs.com/package/node-polyglot
+2025-12-26T19:21:16.4891984Z [EXCLUDED] https://github.com/cody-greene/node-rabbitmq-client
+2025-12-26T19:21:16.4892887Z [EXCLUDED] https://github.com/alexandercerutti/fastify-passkit-webservice
+2025-12-26T19:21:16.4893780Z [EXCLUDED] https://github.com/lyquocnam/fastify-sequelize
+2025-12-26T19:21:16.4894530Z [EXCLUDED] https://github.com/fastify/fastify-basic-auth
+2025-12-26T19:21:16.4895419Z [EXCLUDED] https://github.com/fastify/fastify-helmet
+2025-12-26T19:21:16.4896131Z [EXCLUDED] https://github.com/alemagio/fastify-socket.io
+2025-12-26T19:21:16.4896831Z [EXCLUDED] https://github.com/kenuyx/fastify-http-client
+2025-12-26T19:21:16.4897498Z [EXCLUDED] https://github.com/gomah/fastify-nuxtjs
+2025-12-26T19:21:16.4898179Z [EXCLUDED] https://github.com/kibertoad/fastify-s3-buckets
+2025-12-26T19:21:16.4898923Z [EXCLUDED] https://github.com/fastify/fastify-circuit-breaker
+2025-12-26T19:21:16.4899635Z [EXCLUDED] https://github.com/Jelenkee/fastify-minify
+2025-12-26T19:21:16.4900374Z [EXCLUDED] https://github.com/fastify/fastify-compress
+2025-12-26T19:21:16.4901243Z [EXCLUDED] https://github.com/fastify/fastify-leveldb
+2025-12-26T19:21:16.4901954Z [EXCLUDED] https://github.com/fastify/fastify-passport
+2025-12-26T19:21:16.4902582Z [EXCLUDED] https://github.com/LyraSearch/lyra
+2025-12-26T19:21:16.4903270Z [EXCLUDED] https://github.com/nodefactoryio/fastify-sse-v2
+2025-12-26T19:21:16.4904110Z [EXCLUDED] https://github.com/fastify/fastify-type-provider-typebox
+2025-12-26T19:21:16.4904849Z [EXCLUDED] https://github.com/jclemens24/fastify-typeorm
+2025-12-26T19:21:16.4905273Z [EXCLUDED] https://github.com/rozzilla/fastify-koa
+2025-12-26T19:21:16.4905649Z [EXCLUDED] https://github.com/chonla/fastify-qrcode
+2025-12-26T19:21:16.4906038Z [EXCLUDED] https://github.com/inaiat/fastify-papr
+2025-12-26T19:21:16.4906503Z [EXCLUDED] https://github.com/exequiel09/fastify-angular-universal
+2025-12-26T19:21:16.4906975Z [EXCLUDED] https://github.com/andersonjoseph/fastify-hashids
+2025-12-26T19:21:16.4907613Z [EXCLUDED] https://fastify.dev/docs/latest/Reference/Type-Providers/
+2025-12-26T19:21:16.4908377Z [EXCLUDED] https://github.com/plexinc/papr
+2025-12-26T19:21:16.4908968Z [EXCLUDED] https://github.com/nucleode/arecibo
+2025-12-26T19:21:16.4909575Z [EXCLUDED] https://www.npmjs.com/package/accepts
+2025-12-26T19:21:16.4910241Z [EXCLUDED] https://github.com/alemagio/fastify-postgraphile
+2025-12-26T19:21:16.4911208Z [EXCLUDED] https://github.com/codeaholicguy/fastify-response-caching
+2025-12-26T19:21:16.4911973Z [EXCLUDED] https://github.com/dnlup/fastify-doc
+2025-12-26T19:21:16.4912730Z [EXCLUDED] https://github.com/simone-sanfratello/fastify-peekaboo
+2025-12-26T19:21:16.4913499Z [EXCLUDED] https://github.com/fastify/fastify-accepts
+2025-12-26T19:21:16.4914246Z [EXCLUDED] https://github.com/patrickpissurno/fastify-vhost
+2025-12-26T19:21:16.4915236Z [EXCLUDED] https://github.com/stripe/stripe-node
+2025-12-26T19:21:16.4915907Z [EXCLUDED] https://github.com/mgcrea/fastify-request-logger
+2025-12-26T19:21:16.4916590Z [EXCLUDED] https://gitlab.com/m03geek/fastify-rbac
+2025-12-26T19:21:16.4917217Z [EXCLUDED] https://github.com/hsynlms/fastify-guard
+2025-12-26T19:21:16.4917812Z [EXCLUDED] https://github.com/fastify/otel
+2025-12-26T19:21:16.4918494Z [EXCLUDED] https://github.com/squirrelchat/fastify-opaque-apake
+2025-12-26T19:21:16.4919273Z [EXCLUDED] https://github.com/piscinajs/fastify-piscina
+2025-12-26T19:21:16.4919937Z [EXCLUDED] https://github.com/Bowser65/Tokenize
+2025-12-26T19:21:16.4920444Z [EXCLUDED] https://github.com/Eomm/fastify-user-agent
+2025-12-26T19:21:16.4921277Z [EXCLUDED] https://github.com/mattbishop/fastify-allow
+2025-12-26T19:21:16.4921957Z [EXCLUDED] https://github.com/butlerx/fastify-bookshelfjs
+2025-12-26T19:21:16.4922627Z [EXCLUDED] https://lorenwest.github.io/node-config/
+2025-12-26T19:21:16.4923225Z [EXCLUDED] https://nodemailer.com/
+2025-12-26T19:21:16.4923772Z [EXCLUDED] https://github.com/imjuni/fast-maker
+2025-12-26T19:21:16.4924324Z [EXCLUDED] https://www.jeasx.dev/
+2025-12-26T19:21:16.4924910Z [EXCLUDED] https://github.com/fastify/fastify-etag
+2025-12-26T19:21:16.4925675Z [EXCLUDED] https://github.com/israeleriston/fastify-register-routes
+2025-12-26T19:21:16.4926560Z [EXCLUDED] https://github.com/kamikazechaser/fastify-objectionjs-classes
+2025-12-26T19:21:16.4927356Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Ecosystem.md#community
+2025-12-26T19:21:16.4928185Z [EXCLUDED] https://github.com/FastifyResty/fastify-resty
+2025-12-26T19:21:16.4929090Z [EXCLUDED] https://github.com/chapuletta/fastify-knexjs-mock
+2025-12-26T19:21:16.4929765Z [EXCLUDED] https://github.com/Unleash/unleash
+2025-12-26T19:21:16.4930376Z [EXCLUDED] https://www.graphile.org/postgraphile/
+2025-12-26T19:21:16.4931226Z [EXCLUDED] https://github.com/Eomm/fastify-schema-constraint
+2025-12-26T19:21:16.4932067Z [EXCLUDED] https://github.com/turkerdev/fastify-type-provider-zod
+2025-12-26T19:21:16.4932863Z [EXCLUDED] https://github.com/nearform/fastify-slow-down
+2025-12-26T19:21:16.4933477Z [EXCLUDED] https://github.com/chapuletta/fastify-mongo-memory
+2025-12-26T19:21:16.4934233Z [EXCLUDED] https://github.com/Ethan-Arrowood/fastify-jwt-authz
+2025-12-26T19:21:16.4934967Z [EXCLUDED] https://github.com/fastify/fastify-elasticsearch
+2025-12-26T19:21:16.4935660Z [EXCLUDED] https://github.com/fastify/fastify-swagger
+2025-12-26T19:21:16.4936359Z [EXCLUDED] https://github.com/fastify/fastify-secure-session
+2025-12-26T19:21:16.4937083Z [EXCLUDED] https://github.com/Fdawgs/fastify-json-to-xml
+2025-12-26T19:21:16.4937741Z [EXCLUDED] https://github.com/helmetjs/nocache
+2025-12-26T19:21:16.4938375Z [EXCLUDED] https://github.com/hasura/graphql-engine
+2025-12-26T19:21:16.4939094Z [EXCLUDED] https://github.com/nearform/fastify-auth0-verify
+2025-12-26T19:21:16.4939724Z [EXCLUDED] https://github.com/fastify/fastify-websocket
+2025-12-26T19:21:16.4940382Z [EXCLUDED] https://github.com/lependu/fastify-lured
+2025-12-26T19:21:16.4941165Z [EXCLUDED] https://github.com/hsynlms/fastify-prettier
+2025-12-26T19:21:16.4941835Z [EXCLUDED] https://github.com/fastify/fastify-static
+2025-12-26T19:21:16.4942429Z [EXCLUDED] https://github.com/ljharb/qs
+2025-12-26T19:21:16.4942984Z [EXCLUDED] https://github.com/fastify/fastify-auth
+2025-12-26T19:21:16.4943367Z [EXCLUDED] https://github.com/porsager/postgres
+2025-12-26T19:21:16.4943855Z [EXCLUDED] https://github.com/greguz/fastify-no-additional-properties
+2025-12-26T19:21:16.4944661Z [EXCLUDED] https://github.com/fastify/fastify-routes-stats
+2025-12-26T19:21:16.4945351Z [EXCLUDED] https://github.com/mateonunez/fastify-orama
+2025-12-26T19:21:16.4946011Z [EXCLUDED] https://github.com/beliven-it/fastify-totp
+2025-12-26T19:21:16.4946591Z [EXCLUDED] https://github.com/daotl/fastify-type-provider-effect-schema
+2025-12-26T19:21:16.4947065Z [EXCLUDED] https://github.com/gajus/fastify-webpack-hot
+2025-12-26T19:21:16.4947688Z [EXCLUDED] https://github.com/galvez/fastify-vite
+2025-12-26T19:21:16.4948314Z [EXCLUDED] https://github.com/climba03003/fastify-bree
+2025-12-26T19:21:16.4948950Z [EXCLUDED] https://github.com/Eomm/fastify-explorer
+2025-12-26T19:21:16.4949620Z [EXCLUDED] https://github.com/gbrugger/fastify-multilingual
+2025-12-26T19:21:16.4950242Z [EXCLUDED] https://www.bugsnag.com/
+2025-12-26T19:21:16.4950725Z [EXCLUDED] https://github.com/smartiniOnGitHub/fastify-favicon
+2025-12-26T19:21:16.4951477Z [EXCLUDED] https://github.com/PayU/openapi-validator-middleware#fastify
+2025-12-26T19:21:16.4951932Z [EXCLUDED] https://github.com/imjuni/simple-tjscli
+2025-12-26T19:21:16.4952368Z [EXCLUDED] https://github.com/Vanilla-IceCream/vite-plugin-fastify
+2025-12-26T19:21:16.4952836Z [EXCLUDED] https://github.com/ShogunPanda/fastify-openapi-docs
+2025-12-26T19:21:16.4953249Z [EXCLUDED] https://github.com/eropple/fastify-openapi3
+2025-12-26T19:21:16.4953642Z [EXCLUDED] https://github.com/Bowser65/fastify-tokenize
+2025-12-26T19:21:16.4954019Z [EXCLUDED] https://github.com/Inlecom/fastify-casl
+2025-12-26T19:21:16.4954409Z [EXCLUDED] https://github.com/L2jLiga/fastify-decorators
+2025-12-26T19:21:16.4954952Z [EXCLUDED] https://github.com/chuongtrh/fastify-list-routes
+2025-12-26T19:21:16.4955588Z [EXCLUDED] https://github.com/stalniy/casl
+2025-12-26T19:21:16.4956477Z [EXCLUDED] https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html
+2025-12-26T19:21:16.4957521Z [EXCLUDED] https://github.com/GiovanniCardamone/fastify-autoroutes
+2025-12-26T19:21:16.4958311Z [EXCLUDED] https://github.com/fastify/fastify-vite
+2025-12-26T19:21:16.4959273Z [EXCLUDED] https://github.com/paranoiasystem/fastify-autocrud
+2025-12-26T19:21:16.4960047Z [EXCLUDED] https://github.com/breejs/bree
+2025-12-26T19:21:16.4960695Z [EXCLUDED] https://github.com/gquittet/graceful-server
+2025-12-26T19:21:16.4961548Z [EXCLUDED] https://github.com/fastify/fastify-mongodb
+2025-12-26T19:21:16.4962270Z [EXCLUDED] https://github.com/ThomasAribart/json-schema-to-ts
+2025-12-26T19:21:16.4962986Z [EXCLUDED] https://github.com/fastify/fastify-cookie
+2025-12-26T19:21:16.4963629Z [EXCLUDED] https://github.com/Coobaha/typed-fastify
+2025-12-26T19:21:16.4964274Z [EXCLUDED] https://github.com/fastify/one-line-logger
+2025-12-26T19:21:16.4964993Z [EXCLUDED] https://github.com/fastify/fastify/issues/new/choose
+2025-12-26T19:21:16.4965697Z [EXCLUDED] https://github.com/puzpuzpuz/cls-rtracer
+2025-12-26T19:21:16.4966285Z [EXCLUDED] https://bookshelfjs.org/
+2025-12-26T19:21:16.4966855Z [EXCLUDED] https://github.com/love-lena/fastify-mqtt
+2025-12-26T19:21:16.4967554Z [EXCLUDED] https://github.com/kenriortega/fastify-protobufjs
+2025-12-26T19:21:16.4968332Z [EXCLUDED] https://github.com/hearit-io/fastify-redis-channels
+2025-12-26T19:21:16.4969177Z [EXCLUDED] https://github.com/thomasthiebaud/fastify-schema-to-typescript
+2025-12-26T19:21:16.4969968Z [EXCLUDED] https://github.com/fastify/fastify-hotwire
+2025-12-26T19:21:16.4970614Z [EXCLUDED] https://github.com/lelylan/simple-oauth2
+2025-12-26T19:21:16.4971464Z [EXCLUDED] https://github.com/fastify/fastify-formbody
+2025-12-26T19:21:16.4972117Z [EXCLUDED] https://github.com/fastify/fastify-flash
+2025-12-26T19:21:16.4972756Z [EXCLUDED] https://github.com/hemerajs/fastify-hemera
+2025-12-26T19:21:16.4973435Z [EXCLUDED] https://github.com/mgcrea/pino-pretty-compact
+2025-12-26T19:21:16.4974063Z [EXCLUDED] https://github.com/gj/fastify-ws
+2025-12-26T19:21:16.4974631Z [EXCLUDED] https://github.com/Phara0h/nstats
+2025-12-26T19:21:16.4975256Z [EXCLUDED] https://github.com/greguz/fastify-kubernetes
+2025-12-26T19:21:16.4975900Z [EXCLUDED] https://github.com/gzileni/fastify-osm
+2025-12-26T19:21:16.4976344Z [EXCLUDED] https://github.com/fastify/fastify-awilix
+2025-12-26T19:21:16.4976768Z [EXCLUDED] https://github.com/gzileni/fastify-aws-timestream
+2025-12-26T19:21:16.4977201Z [EXCLUDED] https://github.com/beliven-it/fastify-polyglot
+2025-12-26T19:21:16.4977615Z [EXCLUDED] https://github.com/alex-ppg/fastify-sentry
+2025-12-26T19:21:16.4977974Z [EXCLUDED] https://npm.im/jsonwebtoken
+2025-12-26T19:21:16.4978481Z [EXCLUDED] https://github.com/fastify/fastify-routes
+2025-12-26T19:21:16.4978834Z [EXCLUDED] https://github.com/axios/axios
+2025-12-26T19:21:16.4979169Z [EXCLUDED] https://github.com/kffl/fastify-kafkajs
+2025-12-26T19:21:16.4979555Z [EXCLUDED] https://github.com/alex-ppg/fastify-mongoose
+2025-12-26T19:21:16.4979953Z [EXCLUDED] https://github.com/kenriortega/fastify-msgpack
+2025-12-26T19:21:16.4980365Z [EXCLUDED] https://github.com/immobiliare/fastify-metrics
+2025-12-26T19:21:16.4980964Z [EXCLUDED] https://github.com/lolo32/fastify-response-time
+2025-12-26T19:21:16.4981402Z [EXCLUDED] https://github.com/simenandre/pubsub-http-handler
+2025-12-26T19:21:16.4981894Z [EXCLUDED] https://github.com/NaturalIntelligence/fastify-xml-body-parser
+2025-12-26T19:21:16.4982361Z [EXCLUDED] https://github.com/fastify-userland/workflows
+2025-12-26T19:21:16.4982759Z [EXCLUDED] https://github.com/fastify/fastify-postgres
+2025-12-26T19:21:16.4983106Z [EXCLUDED] https://apitally.io/fastify
+2025-12-26T19:21:16.4983475Z [EXCLUDED] https://github.com/freezestudio/fastify-markdown
+2025-12-26T19:21:16.4983903Z [EXCLUDED] https://github.com/nearform/fastify-casbin-rest
+2025-12-26T19:21:16.4984308Z [EXCLUDED] https://github.com/nigelhanlon/fastify-couchdb
+2025-12-26T19:21:16.4984713Z [EXCLUDED] https://github.com/fastify/fastify-bearer-auth
+2025-12-26T19:21:16.4985126Z [EXCLUDED] https://github.com/spa5k/fastify-file-routes
+2025-12-26T19:21:16.4985528Z [EXCLUDED] https://github.com/fastify/fastify-http-proxy
+2025-12-26T19:21:16.4985948Z [EXCLUDED] https://github.com/jeka-kiselyov/fastify-mongoose-api
+2025-12-26T19:21:16.4986670Z [EXCLUDED] https://learn.microsoft.com/it-it/graph/change-notifications-delivery-webhooks?tabs=http
+2025-12-26T19:21:16.4987233Z [EXCLUDED] https://github.com/TheNoim/fastify-vue
+2025-12-26T19:21:16.4987594Z [EXCLUDED] https://github.com/sinclairzx81/typebox
+2025-12-26T19:21:16.4987974Z [EXCLUDED] https://github.com/hsynlms/sequelize-fastify
+2025-12-26T19:21:16.4988370Z [EXCLUDED] https://github.com/nineohnine/fastify-ssr-vite
+2025-12-26T19:21:16.4988783Z [EXCLUDED] https://github.com/mateonunez/fastify-at-mysql
+2025-12-26T19:21:16.4989175Z [EXCLUDED] https://github.com/joggrdocs/fastify-prisma
+2025-12-26T19:21:16.4989599Z [EXCLUDED] https://github.com/112RG/fastify-cloudflare-turnstile
+2025-12-26T19:21:16.4990050Z [EXCLUDED] https://github.com/tomsvogel/fastify-https-redirect
+2025-12-26T19:21:16.4990444Z [EXCLUDED] https://github.com/Bugs5382/fastify-hl7
+2025-12-26T19:21:16.4990932Z [EXCLUDED] https://nats.io/
+2025-12-26T19:21:16.4991298Z [EXCLUDED] https://github.com/fastify/aws-lambda-fastify
+2025-12-26T19:21:16.4991677Z [EXCLUDED] https://github.com/jeffijoe/awilix
+2025-12-26T19:21:16.4992061Z [EXCLUDED] https://github.com/patrickpissurno/fastify-esso
+2025-12-26T19:21:16.4992464Z [EXCLUDED] https://github.com/Bugs5382/node-hl7-client
+2025-12-26T19:21:16.4992853Z [EXCLUDED] https://github.com/MetCoder95/fastify-get-head
+2025-12-26T19:21:16.4993210Z [EXCLUDED] https://prometheus.io/
+2025-12-26T19:21:16.4993622Z [EXCLUDED] https://nodejs.org/api/async_context.html#class-asynclocalstorage
+2025-12-26T19:21:16.4994069Z [EXCLUDED] https://github.com/yoav0gal/fastify-hana
+2025-12-26T19:21:16.4994417Z [EXCLUDED] https://github.com/statsd/statsd
+2025-12-26T19:21:16.4994819Z [EXCLUDED] https://github.com/gkampitakis/fastify-custom-healthcheck
+2025-12-26T19:21:16.4995273Z [EXCLUDED] https://github.com/mateonunez/fastify-at-postgres
+2025-12-26T19:21:16.4995685Z [EXCLUDED] https://github.com/huangang/fastify-file-upload
+2025-12-26T19:21:16.4996096Z [EXCLUDED] https://github.com/davidedantonio/fastify-axios
+2025-12-26T19:21:16.4996507Z [EXCLUDED] https://github.com/Phara0h/fastify-good-sessions
+2025-12-26T19:21:16.4996878Z [EXCLUDED] https://github.com/enobufs/lured
+2025-12-26T19:21:16.4997280Z [EXCLUDED] https://github.com/KlemenKozelj/fastify-mongodb-sanitizer
+2025-12-26T19:21:16.4997701Z [EXCLUDED] https://github.com/oracle/node-oracledb
+2025-12-26T19:21:16.4998086Z [EXCLUDED] https://github.com/Fdawgs/fastify-disablecache
+2025-12-26T19:21:16.4998590Z [EXCLUDED] https://github.com/fastify/middie
+2025-12-26T19:21:16.4998963Z [EXCLUDED] https://github.com/mcollina/fastify-asyncforge
+2025-12-26T19:21:16.4999381Z [EXCLUDED] https://github.com/mattbishop/fastify-https-always
+2025-12-26T19:21:16.4999762Z [EXCLUDED] https://npm.im/fastify-jwt
+2025-12-26T19:21:16.5000134Z [EXCLUDED] https://gitlab.com/sebdeckers/fastify-tls-keygen
+2025-12-26T19:21:16.5000548Z [EXCLUDED] https://github.com/lependu/fastify-wamp-router
+2025-12-26T19:21:16.5001164Z [EXCLUDED] https://github.com/erfanium/fastify-web-response
+2025-12-26T19:21:16.5001578Z [EXCLUDED] https://github.com/chapuletta/fastify-knexjs
+2025-12-26T19:21:16.5002074Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Ecosystem.md#community-tools
+2025-12-26T19:21:16.5002565Z [EXCLUDED] https://github.com/greguz/fastify-dynareg
+2025-12-26T19:21:16.5002909Z [EXCLUDED] https://nuxtjs.org/
+2025-12-26T19:21:16.5003266Z [EXCLUDED] https://github.com/jeromemacias/fastify-rob-config
+2025-12-26T19:21:16.5003711Z [EXCLUDED] https://github.com/MetCoder95/fastify-split-validator
+2025-12-26T19:21:16.5004126Z [EXCLUDED] https://github.com/bcerati/js-event-bus
+2025-12-26T19:21:16.5004509Z [EXCLUDED] https://cloud.google.com/trace/docs/reference
+2025-12-26T19:21:16.5004902Z [EXCLUDED] https://github.com/matthyk/fastify-override
+2025-12-26T19:21:16.5005284Z [EXCLUDED] https://github.com/applicazza/fastify-nextjs
+2025-12-26T19:21:16.5005678Z [EXCLUDED] https://heyapi.dev/openapi-ts/plugins/fastify
+2025-12-26T19:21:16.5006074Z [EXCLUDED] https://github.com/kylerush/fastify-postgresjs
+2025-12-26T19:21:16.5006614Z [EXCLUDED] https://github.com/mkinoshi/fastify-gcloud-trace
+2025-12-26T19:21:16.5007048Z [EXCLUDED] https://github.com/KaranHotwani/fastify-ses-mailer
+2025-12-26T19:21:16.5007455Z [EXCLUDED] https://github.com/fastify/fastify-sensible
+2025-12-26T19:21:16.5007847Z [EXCLUDED] https://github.com/fastify/fastify-nextjs
+2025-12-26T19:21:16.5008213Z [EXCLUDED] https://github.com/Eomm/fastify-sqlite
+2025-12-26T19:21:16.5008613Z [EXCLUDED] https://github.com/inyourtime/fastify-route-preset
+2025-12-26T19:21:16.5009039Z [EXCLUDED] https://github.com/wobsoriano/fastify-next-auth
+2025-12-26T19:21:16.5009433Z [EXCLUDED] https://github.com/RafaelGSS/fastify-amqp
+2025-12-26T19:21:16.5009800Z [EXCLUDED] https://github.com/prettier/prettier
+2025-12-26T19:21:16.5010175Z [EXCLUDED] https://github.com/fastify/fastify-reply-from
+2025-12-26T19:21:16.5010572Z [EXCLUDED] https://github.com/fastify/fastify-swagger-ui
+2025-12-26T19:21:16.5011269Z [EXCLUDED] https://gitlab.com/aalfiann/fastify-cacheman
+2025-12-26T19:21:16.5011700Z [EXCLUDED] https://github.com/alex-ppg/fastify-cockroachdb
+2025-12-26T19:21:16.5012069Z [EXCLUDED] https://github.com/apache/nano
+2025-12-26T19:21:16.5012427Z [EXCLUDED] https://github.com/alenap93/fastify-kysely
+2025-12-26T19:21:16.5012870Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Ecosystem.md#core
+2025-12-26T19:21:16.5013347Z [EXCLUDED] https://github.com/punkish/fastify-better-sqlite3
+2025-12-26T19:21:16.5013759Z [EXCLUDED] https://github.com/arkerone/fastify-api-key
+2025-12-26T19:21:16.5014138Z [EXCLUDED] https://github.com/squirrelchat/opaque-wasm
+2025-12-26T19:21:16.5014522Z [EXCLUDED] https://github.com/kibertoad/toad-scheduler
+2025-12-26T19:21:16.5014919Z [EXCLUDED] https://github.com/manju4ever/fastify-impressions
+2025-12-26T19:21:16.5015314Z [EXCLUDED] https://github.com/flodlc/http-wizard
+2025-12-26T19:21:16.5015654Z [EXCLUDED] https://www.i18next.com/
+2025-12-26T19:21:16.5015969Z [EXCLUDED] https://github.com/af/envalid
+2025-12-26T19:21:16.5016331Z [EXCLUDED] https://github.com/cemremengu/fastify-oracle
+2025-12-26T19:21:16.5016718Z [EXCLUDED] https://github.com/metcoder95/fastify-racing
+2025-12-26T19:21:16.5017107Z [EXCLUDED] https://github.com/coopflow/fastify-supabase
+2025-12-26T19:21:16.5017490Z [EXCLUDED] https://github.com/Dev-Manny/fastify-appwrite
+2025-12-26T19:21:16.5017861Z [EXCLUDED] https://github.com/lolo32/fastify-sse
+2025-12-26T19:21:16.5018366Z [EXCLUDED] https://github.com/Shiva127/fastify-204
+2025-12-26T19:21:16.5018729Z [EXCLUDED] https://github.com/vanodevium/fastify-qs
+2025-12-26T19:21:16.5019085Z [EXCLUDED] https://github.com/node-modules/urllib
+2025-12-26T19:21:16.5019519Z [EXCLUDED] https://github.com/carlozamagni/fastify-google-cloud-storage
+2025-12-26T19:21:16.5019970Z [EXCLUDED] https://github.com/fastify/fastify-caching
+2025-12-26T19:21:16.5020332Z [EXCLUDED] https://github.com/fastify/fastify-jwt
+2025-12-26T19:21:16.5020727Z [EXCLUDED] https://github.com/ExorTek/fastify-mongo-sanitize
+2025-12-26T19:21:16.5021390Z [EXCLUDED] https://github.com/Jerome1337/fastify-enforce-routes-pattern
+2025-12-26T19:21:16.5021883Z [EXCLUDED] https://github.com/hemerajs/fastify-graceful-shutdown
+2025-12-26T19:21:16.5022279Z [EXCLUDED] https://github.com/geut/fastify-uws
+2025-12-26T19:21:16.5022627Z [EXCLUDED] https://github.com/soldair/node-qrcode
+2025-12-26T19:21:16.5022973Z [EXCLUDED] https://github.com/fastify/session
+2025-12-26T19:21:16.5023313Z [EXCLUDED] https://github.com/fastify/fastify-env
+2025-12-26T19:21:16.5023686Z [EXCLUDED] https://github.com/mgcrea/fastify-session
+2025-12-26T19:21:16.5024128Z [EXCLUDED] https://github.com/i18next/i18next-http-middleware#fastify-usage
+2025-12-26T19:21:16.5024597Z [EXCLUDED] https://github.com/jeromemacias/fastify-boom
+2025-12-26T19:21:16.5024982Z [EXCLUDED] https://github.com/lolo32/fastify-http2https
+2025-12-26T19:21:16.5025368Z [EXCLUDED] https://github.com/denbon05/fastify-lcache
+2025-12-26T19:21:16.5025906Z [EXCLUDED] https://github.com/flower-of-the-bridges/fastify-msgraph-change-notifications-webhook
+2025-12-26T19:21:16.5026656Z [EXCLUDED] https://github.com/clerkinc/javascript/tree/main/packages/fastify
+2025-12-26T19:21:16.5027137Z [EXCLUDED] https://github.com/Shiva127/fastify-event-bus
+2025-12-26T19:21:16.5027620Z [EXCLUDED] https://github.com/angular/angular/tree/master/packages/platform-server
+2025-12-26T19:21:16.5028112Z [EXCLUDED] https://github.com/uNetworking/uWebSockets.js
+2025-12-26T19:21:16.5028503Z [EXCLUDED] https://github.com/beliven-it/fastify-bcrypt
+2025-12-26T19:21:16.5028884Z [EXCLUDED] https://help.sap.com/docs/SAP_HANA_CLIENT
+2025-12-26T19:21:16.5029220Z [EXCLUDED] https://mercurius.dev/
+2025-12-26T19:21:16.5029568Z [EXCLUDED] https://github.com/galiprandi/fastify-lm#readme
+2025-12-26T19:21:16.5029958Z [EXCLUDED] https://github.com/yonathan06/fastify-now
+2025-12-26T19:21:16.5030329Z [EXCLUDED] https://github.com/kffl/fastify-amqp-async
+2025-12-26T19:21:16.5030670Z [EXCLUDED] https://vitejs.dev/
+2025-12-26T19:21:16.5031344Z [EXCLUDED] https://github.com/lukemnet/fastify-twitch-ebs-tools
+2025-12-26T19:21:16.5031828Z [EXCLUDED] https://github.com/beliven-it/fastify-crud-generator
+2025-12-26T19:21:16.5032245Z [EXCLUDED] https://github.com/fastify/fastify-zipkin
+2025-12-26T19:21:16.5032648Z [EXCLUDED] https://github.com/lependu/fastify-webpack-hmr
+2025-12-26T19:21:16.5033050Z [EXCLUDED] https://github.com/now-ims/fastify-firebase
+2025-12-26T19:21:16.5033452Z [EXCLUDED] https://github.com/mgcrea/fastify-graceful-exit
+2025-12-26T19:21:16.5033840Z [EXCLUDED] https://github.com/Eomm/fastify-405
+2025-12-26T19:21:16.5034231Z [EXCLUDED] https://github.com/fastify/fastify-autoload
+2025-12-26T19:21:16.5034623Z [EXCLUDED] https://github.com/Bugs5382/fastify-rabbitmq
+2025-12-26T19:21:16.5035031Z [EXCLUDED] https://github.com/autotelic/fastify-opentelemetry
+2025-12-26T19:21:16.5035485Z [EXCLUDED] https://github.com/pckrishnadas88/fastify-permissions
+2025-12-26T19:21:16.5035908Z [EXCLUDED] https://gitlab.com/m03geek/fastify-metrics
+2025-12-26T19:21:16.5036301Z [EXCLUDED] https://github.com/mahmed8003/fastify-orientdb
+2025-12-26T19:21:16.5036706Z [EXCLUDED] https://github.com/kunal097/fastify-autoload
+2025-12-26T19:21:16.5037084Z [EXCLUDED] https://github.com/attaryz/fastify-devtools
+2025-12-26T19:21:16.5037457Z [EXCLUDED] https://github.com/fox1t/fastify-multer
+2025-12-26T19:21:16.5037829Z [EXCLUDED] https://github.com/nearform/fastify-ravendb
+2025-12-26T19:21:16.5038339Z [EXCLUDED] https://github.com/hapijs/boom
+2025-12-26T19:21:16.5038645Z [EXCLUDED] https://evervault.com/
+2025-12-26T19:21:16.5038988Z [EXCLUDED] https://github.com/ZigaStrgar/fastify-bugsnag
+2025-12-26T19:21:16.5039389Z [EXCLUDED] https://github.com/hemerajs/fastify-error-page
+2025-12-26T19:21:16.5039776Z [EXCLUDED] https://github.com/dnlup/fastify-traps
+2025-12-26T19:21:16.5040170Z [EXCLUDED] https://github.com/trubavuong/fastify-seaweedfs
+2025-12-26T19:21:16.5040655Z     [WARN] Error creating request: InvalidPathToUri("/docs/Reference/TypeScript.md")
+2025-12-26T19:21:16.5041476Z     [WARN] Error creating request: InvalidPathToUri("/docs/Reference/TypeScript.md")
+2025-12-26T19:21:16.5041954Z [EXCLUDED] https://github.com/tswayne/fast-water
+2025-12-26T19:21:16.5042331Z [EXCLUDED] https://github.com/H4ad/serverless-adapter
+2025-12-26T19:21:16.5042748Z [EXCLUDED] https://github.com/twawszczak/amqplib-as-promised
+2025-12-26T19:21:16.5043184Z [EXCLUDED] https://github.com/Adibla/fastify-shared-schema
+2025-12-26T19:21:16.5043780Z [EXCLUDED] https://github.com/fastify/fastify-schedule
+2025-12-26T19:21:16.5044404Z [EXCLUDED] https://github.com/squaremo/amqp.node
+2025-12-26T19:21:16.5044950Z [EXCLUDED] https://github.com/climba03003/fastify-delay-request
+2025-12-26T19:21:16.5045520Z [EXCLUDED] https://github.com/metcoder95/fastify-ip
+2025-12-26T19:21:16.5045939Z [EXCLUDED] https://github.com/TakNePoidet/fastify-route-group
+2025-12-26T19:21:16.5046344Z [EXCLUDED] https://github.com/uNetworking/uWebSockets
+2025-12-26T19:21:16.5046723Z [EXCLUDED] https://github.com/ExorTek/remix-fastify
+2025-12-26T19:21:16.5047319Z [EXCLUDED] https://github.com/fastify-userland/typeorm-query-runner
+2025-12-26T19:21:16.5047807Z [EXCLUDED] https://github.com/blastorg/fastify-aws-dynamodb-cache
+2025-12-26T19:21:16.5048227Z [EXCLUDED] https://github.com/cfware/fastify-babel
+2025-12-26T19:21:16.5048613Z [EXCLUDED] https://github.com/oxsav/fastify-firebase-auth
+2025-12-26T19:21:16.5049003Z [EXCLUDED] https://github.com/fastify/fastify-kafka
+2025-12-26T19:21:16.5049365Z [EXCLUDED] https://github.com/piscinajs/piscina
+2025-12-26T19:21:16.5049746Z [EXCLUDED] https://github.com/jkyberneees/fastify-gateway
+2025-12-26T19:21:16.5050126Z [EXCLUDED] https://github.com/nearform/fast-jwt
+2025-12-26T19:21:16.5050459Z [EXCLUDED] https://github.com/fastify/sse
+2025-12-26T19:21:16.5050992Z [EXCLUDED] https://github.com/smartiniOnGitHub/fastify-cloudevents
+2025-12-26T19:21:16.5051491Z [EXCLUDED] https://github.com/charlesread/fastify-jwt-webapp
+2025-12-26T19:21:16.5051949Z [EXCLUDED] https://github.com/mgcrea/fastify-session-redis-store
+2025-12-26T19:21:16.5052404Z [EXCLUDED] https://github.com/dimonnwc3/fastify-reverse-routes
+2025-12-26T19:21:16.5052890Z [EXCLUDED] https://github.com/Vanilla-IceCream/vite-plugin-fastify-routes
+2025-12-26T19:21:16.5053448Z [EXCLUDED] https://nodejs.org/api/async_hooks.html#async_hooks_class_asynclocalstorage
+2025-12-26T19:21:16.5053990Z [EXCLUDED] https://github.com/open-telemetry/opentelemetry-js-api
+2025-12-26T19:21:16.5054419Z [EXCLUDED] https://github.com/fastify/fastify-redis
+2025-12-26T19:21:16.5054798Z [EXCLUDED] https://github.com/nearform/fastify-casbin
+2025-12-26T19:21:16.5055202Z [EXCLUDED] https://github.com/nearform/fastify-constraints
+2025-12-26T19:21:16.5055645Z [EXCLUDED] https://github.com/fastify/fastify-response-validation
+2025-12-26T19:21:16.5056095Z [EXCLUDED] https://gitlab.com/m03geek/fastify-feature-flags
+2025-12-26T19:21:16.5056495Z [EXCLUDED] https://github.com/mahmed8003/fastify-nats
+2025-12-26T19:21:16.5056881Z [EXCLUDED] https://github.com/alemagio/fastify-envalid
+2025-12-26T19:21:16.5057287Z [EXCLUDED] https://github.com/Eomm/fastify-log-controller/
+2025-12-26T19:21:16.5057681Z [EXCLUDED] https://github.com/coopflow/fastify-mailer
+2025-12-26T19:21:16.5058109Z [EXCLUDED] https://github.com/smartiniOnGitHub/fastify-healthcheck
+2025-12-26T19:21:16.5058557Z [EXCLUDED] https://github.com/qwertyforce/fastify-recaptcha
+2025-12-26T19:21:16.5058957Z [EXCLUDED] https://github.com/gzileni/fastify-aws-sns
+2025-12-26T19:21:16.5059447Z [EXCLUDED] https://github.com/fastify/fastify-mysql
+2025-12-26T19:21:16.5059914Z [EXCLUDED] https://github.com/fastify/fastify-type-provider-json-schema-to-ts
+2025-12-26T19:21:16.5060413Z [EXCLUDED] https://github.com/PavelPolyakov/fastify-blipp
+2025-12-26T19:21:16.5060964Z [EXCLUDED] https://github.com/thorough-developer/fastify-http-context
+2025-12-26T19:21:16.5061441Z [EXCLUDED] https://github.com/lependu/fastify-language-parser
+2025-12-26T19:21:16.5061854Z [EXCLUDED] https://github.com/anonrig/electron-server
+2025-12-26T19:21:16.5062283Z [EXCLUDED] https://github.com/Vanilla-IceCream/fastify-cloudinary
+2025-12-26T19:21:16.5062722Z [EXCLUDED] https://firebase.google.com/docs/admin/setup
+2025-12-26T19:21:16.5063149Z [EXCLUDED] https://github.com/ShogunPanda/fastify-print-routes
+2025-12-26T19:21:16.5063603Z [EXCLUDED] https://github.com/fastify/fastify-accepts-serializer
+2025-12-26T19:21:16.5064027Z [EXCLUDED] https://github.com/coopflow/fastify-stripe
+2025-12-26T19:21:16.5064402Z [EXCLUDED] https://github.com/supabase/supabase-js
+2025-12-26T19:21:16.5064836Z [EXCLUDED] https://github.com/ShogunPanda/fastify-http-errors-enhanced
+2025-12-26T19:21:16.5065279Z [EXCLUDED] https://github.com/fastify/under-pressure
+2025-12-26T19:21:16.5065625Z [EXCLUDED] https://github.com/zeit/next.js/
+2025-12-26T19:21:16.5066136Z [EXCLUDED] https://github.com/fastify/fastify-url-data
+2025-12-26T19:21:16.5066801Z [EXCLUDED] https://github.com/Bugs5382/node-hl7-server
+2025-12-26T19:21:16.5067494Z [EXCLUDED] https://github.com/fastify-userland/request-id
+2025-12-26T19:21:16.5068181Z [EXCLUDED] https://github.com/fastify/fastify-multipart
+2025-12-26T19:21:16.5069325Z [EXCLUDED] https://github.com/yubinTW/fastify-keycloak-adapter
+2025-12-26T19:21:16.5070155Z [EXCLUDED] https://github.com/jsumners/fastify-server-session
+2025-12-26T19:21:16.5070613Z [EXCLUDED] https://github.com/Unbuttun/fastify-slonik
+2025-12-26T19:21:16.5071241Z [EXCLUDED] https://github.com/inthepocket/fastify-typeorm-plugin
+2025-12-26T19:21:16.5071710Z [EXCLUDED] https://github.com/yoav0gal/fastify-sqlite-typed
+2025-12-26T19:21:16.5072143Z [EXCLUDED] https://github.com/Briscoooe/fastify-evervault/
+2025-12-26T19:21:16.5072609Z [EXCLUDED] https://github.com/scalar/scalar/tree/main/integrations/fastify
+2025-12-26T19:21:16.5073063Z [EXCLUDED] https://github.com/Eomm/fastify-raw-body
+2025-12-26T19:21:16.5073496Z [EXCLUDED] https://en.wikipedia.org/wiki/Cross-site_request_forgery
+2025-12-26T19:21:16.5073982Z [EXCLUDED] https://github.com/mgcrea/fastify-session-sodium-crypto
+2025-12-26T19:21:16.5074439Z [EXCLUDED] https://github.com/climba03003/fastify-formidable
+2025-12-26T19:21:16.5074834Z [EXCLUDED] https://github.com/fastify/fastify-cors
+2025-12-26T19:21:16.5075206Z [EXCLUDED] https://github.com/Jeff-Lewis/cls-hooked
+2025-12-26T19:21:16.5075573Z [EXCLUDED] https://github.com/fastify/point-of-view
+2025-12-26T19:21:16.5075930Z [EXCLUDED] https://github.com/niieani/hashids.js
+2025-12-26T19:21:16.5076294Z [EXCLUDED] https://github.com/fastify/fastify-funky
+2025-12-26T19:21:16.5076677Z [EXCLUDED] https://github.com/fastify/fastify-rate-limit
+2025-12-26T19:21:16.5077070Z [EXCLUDED] https://github.com/fastify/csrf-protection
+2025-12-26T19:21:16.5096644Z [EXCLUDED] https://github.com/ManUtopiK/fastify-hasura
+2025-12-26T19:21:16.5097211Z [EXCLUDED] https://github.com/jarcodallo/fastify-objectionjs
+2025-12-26T19:21:16.5097639Z [EXCLUDED] https://github.com/apitally/apitally-js
+2025-12-26T19:21:16.5098034Z [EXCLUDED] https://github.com/simov/fastify-grant
+2025-12-26T19:21:16.5098428Z [EXCLUDED] https://github.com/TheNoim/fastify-loader
+2025-12-26T19:21:16.5098848Z [EXCLUDED] https://github.com/fastify/fastify-request-context
+2025-12-26T19:21:16.5099278Z [EXCLUDED] https://github.com/fastify/fastify-express
+2025-12-26T19:21:16.5099638Z [EXCLUDED] https://github.com/colinhacks/zod
+2025-12-26T19:21:16.5100023Z [EXCLUDED] https://github.com/ahmadnassri/node-oas-fastify
+2025-12-26T19:21:16.5100435Z [EXCLUDED] https://github.com/aaroncadillac/crudify-mongo
+2025-12-26T19:21:16.5101317Z [EXCLUDED] https://github.com/fastify/fastify-oauth2
+2025-12-26T19:21:16.5101726Z [EXCLUDED] https://github.com/Vanilla-IceCream/fastify-i18n
+2025-12-26T19:21:16.5102112Z [EXCLUDED] https://github.com/websockets/ws
+2025-12-26T19:21:16.5102489Z [EXCLUDED] https://github.com/DanieleFedeli/fastify-get-only
+2025-12-26T19:21:16.5102925Z [EXCLUDED] https://github.com/seriousme/fastify-openapi-glue
+2025-12-26T19:21:16.5103389Z [EXCLUDED] https://github.com/mohammadraufzahed/fastify-redis-session
+2025-12-26T19:21:16.5103850Z [EXCLUDED] https://github.com/alex-ppg/fastify-influxdb
+2025-12-26T19:21:16.5104234Z [EXCLUDED] https://gitlab.com/m03geek/fastify-oas
+2025-12-26T19:21:16.5104629Z [EXCLUDED] https://github.com/fastify/fastify-throttle
+2025-12-26T19:21:16.5105117Z [EXCLUDED] https://github.com/aws/aws-xray-sdk-node/tree/master/sdk_contrib/fastify
+2025-12-26T19:21:16.5105676Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onready
+2025-12-26T19:21:16.5106252Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md#handle-the-scope
+2025-12-26T19:21:16.5107207Z [EXCLUDED] https://cloud.google.com/blog/products/containers-kubernetes/kubernetes-best-practices-setting-up-health-checks-with-readiness-and-liveness-probes
+2025-12-26T19:21:16.5108078Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md
+2025-12-26T19:21:16.5108754Z [EXCLUDED] https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow
+2025-12-26T19:21:16.5109401Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md
+2025-12-26T19:21:16.5110002Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md
+2025-12-26T19:21:16.5110473Z [EXCLUDED] https://nodejs.org/api/net.html#event-listening
+2025-12-26T19:21:16.5111290Z [EXCLUDED] https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+2025-12-26T19:21:16.5111786Z [EXCLUDED] https://github.com/fastify/fluent-json-schema
+2025-12-26T19:21:16.5112315Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md
+2025-12-26T19:21:16.5113086Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md#adding-a-shared-schema
+2025-12-26T19:21:16.5113652Z [EXCLUDED] https://x.com/maksimsinik
+2025-12-26T19:21:16.5114040Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md
+2025-12-26T19:21:16.5114460Z [EXCLUDED] https://opencollective.com/fastify
+2025-12-26T19:21:16.5114879Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md
+2025-12-26T19:21:16.5115403Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/ContentTypeParser.md
+2025-12-26T19:21:16.5115885Z [200] file:///home/runner/work/fastify/fastify/README.md#team
+2025-12-26T19:21:16.5116310Z [EXCLUDED] https://img.shields.io/npm/v/fastify.svg?style=flat
+2025-12-26T19:21:16.5116695Z [EXCLUDED] https://www.npmjs.com/~uzlopak
+2025-12-26T19:21:16.5117105Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Ecosystem.md#core
+2025-12-26T19:21:16.5117588Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md
+2025-12-26T19:21:16.5117972Z [EXCLUDED] https://openjsf.org/projects
+2025-12-26T19:21:16.5118387Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Encapsulation.md
+2025-12-26T19:21:16.5118949Z [EXCLUDED] https://img.shields.io/badge/code_style-neostandard-brightgreen?style=flat
+2025-12-26T19:21:16.5119420Z [EXCLUDED] https://github.com/allevo
+2025-12-26T19:21:16.5119751Z [200] file:///home/runner/work/fastify/fastify/LICENSE
+2025-12-26T19:21:16.5120090Z [EXCLUDED] https://github.com/simoneb
+2025-12-26T19:21:16.5120457Z [200] file:///home/runner/work/fastify/fastify/README.md#license
+2025-12-26T19:21:16.5121057Z [EXCLUDED] https://github.com/fastify/demo
+2025-12-26T19:21:16.5121409Z [EXCLUDED] https://www.npmjs.com/~eomm
+2025-12-26T19:21:16.5121713Z [EXCLUDED] https://cloud.google.com/
+2025-12-26T19:21:16.5122144Z [EXCLUDED] https://bestpractices.coreinfrastructure.org/projects/7585/badge
+2025-12-26T19:21:16.5122741Z [EXCLUDED] https://github.com/cemremengu
+2025-12-26T19:21:16.5123111Z [200] file:///home/runner/work/fastify/fastify/CONTRIBUTING.md
+2025-12-26T19:21:16.5123471Z [EXCLUDED] https://x.com/harrybrundage
+2025-12-26T19:21:16.5123832Z [200] file:///home/runner/work/fastify/fastify/README.md#example
+2025-12-26T19:21:16.5124208Z [EXCLUDED] https://github.com/jean-michelet
+2025-12-26T19:21:16.5124594Z [200] file:///home/runner/work/fastify/fastify/README.md#documentation
+2025-12-26T19:21:16.5125050Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md
+2025-12-26T19:21:16.5125436Z [EXCLUDED] https://github.com/climba03003
+2025-12-26T19:21:16.5125844Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Fluent-Schema.md
+2025-12-26T19:21:16.5126327Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md
+2025-12-26T19:21:16.5126815Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md
+2025-12-26T19:21:16.5127214Z [EXCLUDED] https://github.com/dalisoft
+2025-12-26T19:21:16.5127528Z [EXCLUDED] https://www.npmjs.com/~serayaeryn
+2025-12-26T19:21:16.5127931Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md
+2025-12-26T19:21:16.5128318Z [EXCLUDED] https://github.com/delvedor
+2025-12-26T19:21:16.5128616Z [EXCLUDED] https://x.com/metcoder95
+2025-12-26T19:21:16.5128982Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Logging.md
+2025-12-26T19:21:16.5129392Z [EXCLUDED] https://www.npmjs.com/~luisorbaiceta
+2025-12-26T19:21:16.5129824Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Ecosystem.md#community
+2025-12-26T19:21:16.5130387Z [EXCLUDED] https://github.com/fastify/fastify-cli
+2025-12-26T19:21:16.5130927Z [EXCLUDED] https://www.npmjs.com/~cemremengu
+2025-12-26T19:21:16.5131310Z [EXCLUDED] https://www.npmjs.com/~davidmarkclements
+2025-12-26T19:21:16.5131661Z [EXCLUDED] https://github.com/metcoder95
+2025-12-26T19:21:16.5131981Z [EXCLUDED] https://github.com/Ethan-Arrowood/
+2025-12-26T19:21:16.5132377Z [200] file:///home/runner/work/fastify/fastify/README.md#install
+2025-12-26T19:21:16.5132751Z [EXCLUDED] https://github.com/fox1t
+2025-12-26T19:21:16.5133049Z [EXCLUDED] https://x.com/dalisoft
+2025-12-26T19:21:16.5133449Z [EXCLUDED] https://bestpractices.coreinfrastructure.org/projects/7585
+2025-12-26T19:21:16.5133875Z [EXCLUDED] https://www.npmjs.com/~metcoder95
+2025-12-26T19:21:16.5134200Z [EXCLUDED] https://www.npmjs.com/~fox1t
+2025-12-26T19:21:16.5134510Z [EXCLUDED] https://www.npmjs.com/~dalisoft
+2025-12-26T19:21:16.5134829Z [EXCLUDED] https://www.npmjs.com/~airhorns
+2025-12-26T19:21:16.5135139Z [EXCLUDED] https://github.com/airhorns/
+2025-12-26T19:21:16.5135523Z [200] file:///home/runner/work/fastify/fastify/README.md#core-features
+2025-12-26T19:21:16.5135917Z [EXCLUDED] https://www.npmjs.com/~starptech
+2025-12-26T19:21:16.5136290Z [200] file:///home/runner/work/fastify/fastify/README.md#support
+2025-12-26T19:21:16.5136659Z [EXCLUDED] https://www.npmjs.com/~simoneb
+2025-12-26T19:21:16.5137009Z [EXCLUDED] https://github.com/fastify/create-fastify
+2025-12-26T19:21:16.5137356Z [EXCLUDED] https://github.com/nwoltman
+2025-12-26T19:21:16.5137718Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Index.md
+2025-12-26T19:21:16.5138163Z [EXCLUDED] https://img.shields.io/opencollective/all/fastify
+2025-12-26T19:21:16.5138533Z [EXCLUDED] https://discord.gg/D3FZYPy
+2025-12-26T19:21:16.5138837Z [EXCLUDED] https://github.com/zekth
+2025-12-26T19:21:16.5139180Z [EXCLUDED] https://fastify.dev/docs/latest/Reference/LTS/
+2025-12-26T19:21:16.5139538Z [EXCLUDED] https://x.com/luisorbai
+2025-12-26T19:21:16.5139934Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Getting-Started.md
+2025-12-26T19:21:16.5140385Z [200] file:///home/runner/work/fastify/fastify/SPONSORS.md
+2025-12-26T19:21:16.5140733Z [EXCLUDED] https://nearform.com/
+2025-12-26T19:21:16.5141244Z [EXCLUDED] https://www.npmjs.com/~salmanm
+2025-12-26T19:21:16.5141569Z [EXCLUDED] https://www.npmjs.com/~allevo
+2025-12-26T19:21:16.5141876Z [EXCLUDED] https://www.npmjs.com/~fdawgs
+2025-12-26T19:21:16.5142542Z [EXCLUDED] https://img.shields.io/badge/Contribute%20with-Gitpod-908a85?logo=gitpod&color=blue
+2025-12-26T19:21:16.5143042Z [EXCLUDED] https://x.com/_rafaelgss
+2025-12-26T19:21:16.5143331Z [EXCLUDED] https://x.com/dustindeus
+2025-12-26T19:21:16.5143629Z [EXCLUDED] https://platformatic.dev/
+2025-12-26T19:21:16.5143971Z [EXCLUDED] https://github.com/sponsors/fastify#sponsors
+2025-12-26T19:21:16.5144323Z [EXCLUDED] https://x.com/matteocollina
+2025-12-26T19:21:16.5144685Z [200] file:///home/runner/work/fastify/fastify/README.md#hosted-by
+2025-12-26T19:21:16.5145132Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/LTS.md
+2025-12-26T19:21:16.5145503Z [EXCLUDED] https://x.com/cagataycali
+2025-12-26T19:21:16.5145807Z [EXCLUDED] https://www.npmjs.com/~jsumners
+2025-12-26T19:21:16.5146117Z [EXCLUDED] https://fastify.dev/
+2025-12-26T19:21:16.5146499Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#listen
+2025-12-26T19:21:16.5147285Z [EXCLUDED] https://github.com/openjs-foundation/artwork/blob/main/openjs_foundation/openjs_foundation-logo-horizontal-color.png?raw=true
+2025-12-26T19:21:16.5148123Z [EXCLUDED] https://github.com/fastify/fastify/actions/workflows/website.yml/badge.svg?branch=main
+2025-12-26T19:21:16.5148624Z [EXCLUDED] https://x.com/NathanWoltman
+2025-12-26T19:21:16.5148922Z [EXCLUDED] https://github.com/salmanm
+2025-12-26T19:21:16.5149244Z [EXCLUDED] https://github.com/fastify/benchmarks
+2025-12-26T19:21:16.5149575Z [EXCLUDED] https://discord.gg/fastify
+2025-12-26T19:21:16.5149887Z [EXCLUDED] https://www.npmjs.com/~climba03003
+2025-12-26T19:21:16.5150335Z [EXCLUDED] https://www.npmjs.com/~gurgunday
+2025-12-26T19:21:16.5150660Z [EXCLUDED] https://github.com/pinojs/pino
+2025-12-26T19:21:16.5151250Z [EXCLUDED] https://img.shields.io/npm/dm/fastify.svg?style=flat
+2025-12-26T19:21:16.5151737Z [EXCLUDED] https://github.com/fastify/fastify/actions/workflows/website.yml
+2025-12-26T19:21:16.5152185Z [EXCLUDED] https://www.npmjs.com/package/fastify
+2025-12-26T19:21:16.5152518Z [EXCLUDED] https://github.com/eomm
+2025-12-26T19:21:16.5152808Z [EXCLUDED] https://x.com/loige
+2025-12-26T19:21:16.5153090Z [EXCLUDED] https://github.com/lmammino
+2025-12-26T19:21:16.5153394Z [EXCLUDED] https://github.com/luisorbaiceta
+2025-12-26T19:21:16.5153706Z [EXCLUDED] https://x.com/arrowoodtech
+2025-12-26T19:21:16.5154237Z [EXCLUDED] https://web.archive.org/web/20170711105010/https://snyk.io/blog/mongodb-hack-and-secure-defaults/
+2025-12-26T19:21:16.5154794Z [EXCLUDED] https://www.npmjs.com/~lmammino
+2025-12-26T19:21:16.5155100Z [EXCLUDED] https://x.com/trivikram
+2025-12-26T19:21:16.5155389Z [EXCLUDED] https://x.com/ayoubelkh
+2025-12-26T19:21:16.5155669Z [EXCLUDED] https://x.com/serayaeryn
+2025-12-26T19:21:16.5155966Z [EXCLUDED] https://github.com/rafaelgss
+2025-12-26T19:21:16.5156276Z [EXCLUDED] https://www.npmjs.com/~ayoubelk
+2025-12-26T19:21:16.5156622Z [EXCLUDED] https://github.com/neostandard/neostandard
+2025-12-26T19:21:16.5156971Z [EXCLUDED] https://github.com/StarpTech
+2025-12-26T19:21:16.5157359Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md
+2025-12-26T19:21:16.5157900Z [EXCLUDED] https://img.shields.io/badge/Security-Responsible%20Disclosure-yellow.svg
+2025-12-26T19:21:16.5158352Z [EXCLUDED] https://github.com/uzlopak
+2025-12-26T19:21:16.5158888Z [EXCLUDED] https://github.com/fastify/fastify/actions/workflows/package-manager-ci.yml/badge.svg?branch=main
+2025-12-26T19:21:16.5159423Z [EXCLUDED] https://x.com/manueomm
+2025-12-26T19:21:16.5159710Z [EXCLUDED] https://x.com/delvedor
+2025-12-26T19:21:16.5160166Z [EXCLUDED] https://github.com/fastify/fastify/actions/workflows/ci.yml/badge.svg?branch=main
+2025-12-26T19:21:16.5160667Z [EXCLUDED] https://www.npmjs.com/~ethan_arrowood
+2025-12-26T19:21:16.5161209Z [EXCLUDED] https://x.com/cemremengu
+2025-12-26T19:21:16.5161503Z [EXCLUDED] https://github.com/AyoubElk
+2025-12-26T19:21:16.5161881Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/SECURITY.md
+2025-12-26T19:21:16.5162476Z [200] file:///home/runner/work/fastify/fastify/README.md#ecosystem
+2025-12-26T19:21:16.5162937Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Middleware.md
+2025-12-26T19:21:16.5163339Z [EXCLUDED] https://github.com/jsumners
+2025-12-26T19:21:16.5163652Z [EXCLUDED] https://www.npmjs.com/~cagataycali
+2025-12-26T19:21:16.5163982Z [EXCLUDED] https://www.npmjs.com/~rafaelgss
+2025-12-26T19:21:16.5164367Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Serverless.md
+2025-12-26T19:21:16.5164755Z [EXCLUDED] https://x.com/simonebu
+2025-12-26T19:21:16.5165332Z [EXCLUDED] https://github.com/openjs-foundation/cross-project-council/blob/HEAD/PROJECT_PROGRESSION.md#at-large-projects
+2025-12-26T19:21:16.5165932Z [EXCLUDED] https://github.com/SerayaEryn
+2025-12-26T19:21:16.5166249Z [EXCLUDED] https://www.npmjs.com/~delvedor
+2025-12-26T19:21:16.5166596Z [EXCLUDED] https://github.com/fastify/fastify/tree/4.x
+2025-12-26T19:21:16.5167019Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md
+2025-12-26T19:21:16.5167484Z [EXCLUDED] https://gitpod.io/#https://github.com/fastify/fastify
+2025-12-26T19:21:16.5168134Z [EXCLUDED] https://www.herodevs.com/support/fastify-nes?utm_source=fastify&utm_medium=link&utm_campaign=github_readme
+2025-12-26T19:21:16.5168712Z [EXCLUDED] https://www.npmjs.com/~dancastillo
+2025-12-26T19:21:16.5169043Z [EXCLUDED] https://github.com/cagataycali
+2025-12-26T19:21:16.5169356Z [EXCLUDED] https://www.npmjs.com/~nwoltman
+2025-12-26T19:21:16.5169753Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Benchmarking.md
+2025-12-26T19:21:16.5170334Z [200] file:///home/runner/work/fastify/fastify/README.md#quick-start
+2025-12-26T19:21:16.5170732Z [EXCLUDED] https://www.letzdoitapp.com/
+2025-12-26T19:21:16.5171220Z [EXCLUDED] https://openjsf.org/
+2025-12-26T19:21:16.5171504Z [EXCLUDED] https://json-schema.org/
+2025-12-26T19:21:16.5171800Z [EXCLUDED] https://x.com/jsumners79
+2025-12-26T19:21:16.5172090Z [EXCLUDED] https://github.com/trivikr
+2025-12-26T19:21:16.5172433Z [EXCLUDED] https://www.npmjs.com/~matteo.collina
+2025-12-26T19:21:16.5172759Z [EXCLUDED] https://github.com/mcollina
+2025-12-26T19:21:16.5173133Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Testing.md
+2025-12-26T19:21:16.5173515Z [EXCLUDED] https://github.com/dancastillo
+2025-12-26T19:21:16.5173850Z [EXCLUDED] https://github.com/davidmarkclements
+2025-12-26T19:21:16.5174183Z [EXCLUDED] https://www.npmjs.com/~trivikr
+2025-12-26T19:21:16.5174586Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Recommendations.md
+2025-12-26T19:21:16.5175062Z [EXCLUDED] https://img.shields.io/discord/725613461949906985
+2025-12-26T19:21:16.5175512Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Write-Plugin.md
+2025-12-26T19:21:16.5175998Z [EXCLUDED] https://github.com/fastify/fastify/actions/workflows/ci.yml
+2025-12-26T19:21:16.5176455Z [200] file:///home/runner/work/fastify/fastify/README.md#benchmarks
+2025-12-26T19:21:16.5176991Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md
+2025-12-26T19:21:16.5177551Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md
+2025-12-26T19:21:16.5178078Z [EXCLUDED] https://github.com/fastify/fastify/actions/workflows/package-manager-ci.yml
+2025-12-26T19:21:16.5178540Z [EXCLUDED] https://github.com/gurgunday
+2025-12-26T19:21:16.5178926Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Lifecycle.md
+2025-12-26T19:21:16.5179318Z [EXCLUDED] https://github.com/Fdawgs
+2025-12-26T19:21:16.5179684Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/HTTP2.md
+2025-12-26T19:21:16.5180088Z [EXCLUDED] https://github.com/fastify/example
+2025-12-26T19:21:16.5180411Z [EXCLUDED] https://github.com/fastify/help
+2025-12-26T19:21:16.5180718Z [EXCLUDED] https://x.com/davidmarkclem
+2025-12-26T19:21:16.5181279Z [EXCLUDED] https://www.npmjs.com/~jean-michelet
+2025-12-26T19:21:16.5181606Z [EXCLUDED] https://x.com/allevitommaso
+2025-12-26T19:21:16.5181951Z [EXCLUDED] https://github.com/fastify/fastify/pull/2093
+2025-12-26T19:21:16.5182545Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md
+2025-12-26T19:21:16.5183008Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md
+2025-12-26T19:21:16.5183433Z [EXCLUDED] https://github.com/fastify/fastify/pull/2023
+2025-12-26T19:21:16.5183816Z [EXCLUDED] https://github.com/fastify/fastify/pull/2134
+2025-12-26T19:21:16.5184193Z [EXCLUDED] https://github.com/fastify/fastify/pull/1750
+2025-12-26T19:21:16.5184607Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Logging.md
+2025-12-26T19:21:16.5185029Z [EXCLUDED] https://github.com/fastify/fastify/pull/2005
+2025-12-26T19:21:16.5185404Z [EXCLUDED] https://github.com/fastify/fastify/pull/2086
+2025-12-26T19:21:16.5185780Z [EXCLUDED] https://github.com/fastify/fastify/pull/2073
+2025-12-26T19:21:16.5186298Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#factory-connection-timeout
+2025-12-26T19:21:16.5186973Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#factory-keep-alive-timeout
+2025-12-26T19:21:16.5187591Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md#async-await
+2025-12-26T19:21:16.5188062Z [EXCLUDED] https://github.com/fastify/fastify/pull/2015
+2025-12-26T19:21:16.5188544Z [EXCLUDED] https://dev.to/eomm/validation-and-serialization-in-fastify-v3-2e8l
+2025-12-26T19:21:16.5189016Z [EXCLUDED] https://github.com/fastify/fastify/pull/2017
+2025-12-26T19:21:16.5189397Z [EXCLUDED] https://github.com/fastify/fastify/pull/2286
+2025-12-26T19:21:16.5189769Z [EXCLUDED] https://github.com/fastify/fastify-express
+2025-12-26T19:21:16.5190259Z [EXCLUDED] https://github.com/fastify/fastify/pull/2014
+2025-12-26T19:21:16.5190625Z [EXCLUDED] https://github.com/fastify/middie
+2025-12-26T19:21:16.5191155Z [EXCLUDED] https://github.com/fastify/fastify/pull/2008
+2025-12-26T19:21:16.5191535Z [EXCLUDED] https://github.com/fastify/fastify/pull/2004
+2025-12-26T19:21:16.5191937Z [EXCLUDED] https://go.codemod.com/fastify-4-migration-recipe
+2025-12-26T19:21:16.5192343Z [EXCLUDED] https://github.com/codemod-com/codemod
+2025-12-26T19:21:16.5192706Z [EXCLUDED] https://github.com/fastify/fastify/pull/3794
+2025-12-26T19:21:16.5193082Z [EXCLUDED] https://github.com/fastify/fastify/pull/3506
+2025-12-26T19:21:16.5193501Z [EXCLUDED] https://go.codemod.com/fastify-4-await-register-calls
+2025-12-26T19:21:16.5193945Z [EXCLUDED] https://go.codemod.com/fastify-4-reply-raw-access
+2025-12-26T19:21:16.5194432Z [EXCLUDED] https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Trailer
+2025-12-26T19:21:16.5194909Z [EXCLUDED] https://go.codemod.com/fastify-4-remove-app-use
+2025-12-26T19:21:16.5195336Z [EXCLUDED] https://en.wikipedia.org/wiki/Variadic_function
+2025-12-26T19:21:16.5195768Z [EXCLUDED] https://go.codemod.com/fastify-4-wrap-routes-plugin
+2025-12-26T19:21:16.5196182Z [EXCLUDED] https://github.com/fastify/fastify/pull/3261
+2025-12-26T19:21:16.5196604Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md
+2025-12-26T19:21:16.5197022Z [EXCLUDED] https://github.com/fastify/fastify/pull/2954
+2025-12-26T19:21:16.5197430Z [EXCLUDED] https://ajv.js.org/strict-mode.html#strict-types
+2025-12-26T19:21:16.5197800Z [EXCLUDED] https://github.com/fastify/middie
+2025-12-26T19:21:16.5198153Z [EXCLUDED] https://github.com/fastify/fastify-express
+2025-12-26T19:21:16.5198497Z [EXCLUDED] https://go.codemod.com/fastify
+2025-12-26T19:21:16.5198887Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Ecosystem.md
+2025-12-26T19:21:16.5199414Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Delay-Accepting-Requests.md
+2025-12-26T19:21:16.5199957Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md
+2025-12-26T19:21:16.5200465Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Migration-Guide-V4.md
+2025-12-26T19:21:16.5201136Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Fluent-Schema.md
+2025-12-26T19:21:16.5201632Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Style-Guide.md
+2025-12-26T19:21:16.5202286Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Getting-Started.md
+2025-12-26T19:21:16.5202768Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Testing.md
+2025-12-26T19:21:16.5203235Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Write-Plugin.md
+2025-12-26T19:21:16.5203708Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Benchmarking.md
+2025-12-26T19:21:16.5204209Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Migration-Guide-V3.md
+2025-12-26T19:21:16.5204770Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Detecting-When-Clients-Abort.md
+2025-12-26T19:21:16.5205312Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Serverless.md
+2025-12-26T19:21:16.5205778Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Contributing.md
+2025-12-26T19:21:16.5206238Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md
+2025-12-26T19:21:16.5206695Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md
+2025-12-26T19:21:16.5207173Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md
+2025-12-26T19:21:16.5207688Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Prototype-Poisoning.md
+2025-12-26T19:21:16.5208205Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Recommendations.md
+2025-12-26T19:21:16.5208618Z [EXCLUDED] https://github.com/mcollina
+2025-12-26T19:21:16.5209193Z [EXCLUDED] https://web.archive.org/web/20190201220503/https://hueniverse.com/on-hapi-licensing-a-preview-f982662ee898
+2025-12-26T19:21:16.5209994Z [EXCLUDED] https://hueniverse.com/why-you-should-consider-hapi-6163689bd7c2
+2025-12-26T19:21:16.5210549Z [EXCLUDED] https://github.com/fastify/fastify/issues/1426#issuecomment-817957913
+2025-12-26T19:21:16.5211147Z [EXCLUDED] https://cve.mitre.org/
+2025-12-26T19:21:16.5211443Z [EXCLUDED] https://semver.org/
+2025-12-26T19:21:16.5211758Z [EXCLUDED] https://github.com/hapijs/hapi/issues/3916
+2025-12-26T19:21:16.5212391Z [EXCLUDED] https://medium.com/intrinsic/javascript-prototype-poisoning-vulnerabilities-in-the-wild-7bc15347c96
+2025-12-26T19:21:16.5213070Z [EXCLUDED] https://en.wikipedia.org/wiki/Denial-of-service_attack
+2025-12-26T19:21:16.5213461Z [EXCLUDED] https://hapi.dev/
+2025-12-26T19:21:16.5213736Z [EXCLUDED] https://github.com/nlf
+2025-12-26T19:21:16.5214023Z [EXCLUDED] https://github.com/hapijs/joi
+2025-12-26T19:21:16.5214338Z [EXCLUDED] https://github.com/hapijs/bourne
+2025-12-26T19:21:16.5214656Z [EXCLUDED] https://www.npmjs.com/package/qs
+2025-12-26T19:21:16.5214965Z [EXCLUDED] https://github.com/Marsup
+2025-12-26T19:21:16.5215258Z [EXCLUDED] https://github.com/grafana/k6
+2025-12-26T19:21:16.5215693Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Recommendations.md#nginx
+2025-12-26T19:21:16.5216205Z [EXCLUDED] https://en.wikipedia.org/wiki/Scalability#Horizontal
+2025-12-26T19:21:16.5216771Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Recommendations.md#use-a-reverse-proxy
+2025-12-26T19:21:16.5217349Z [EXCLUDED] https://en.wikipedia.org/wiki/Common_Gateway_Interface
+2025-12-26T19:21:16.5217721Z [EXCLUDED] https://nginx.org/
+2025-12-26T19:21:16.5218345Z [EXCLUDED] https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes
+2025-12-26T19:21:16.5219116Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Recommendations.md#capacity
+2025-12-26T19:21:16.5219606Z [EXCLUDED] https://www.youtube.com/watch?v=P9csgxBgaZ8
+2025-12-26T19:21:16.5220079Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Recommendations.md#haproxy
+2025-12-26T19:21:16.5220651Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Recommendations.md#multiple
+2025-12-26T19:21:16.5221747Z [EXCLUDED] https://web.archive.org/web/20190821102906/https://medium.com/intrinsic/why-should-i-use-a-reverse-proxy-if-node-js-is-production-ready-5a079408b2ca
+2025-12-26T19:21:16.5222536Z [EXCLUDED] https://github.com/mcollina/autocannon
+2025-12-26T19:21:16.5223168Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Recommendations.md#kubernetes
+2025-12-26T19:21:16.5223626Z [EXCLUDED] https://www.haproxy.org/
+2025-12-26T19:21:16.5224010Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md
+2025-12-26T19:21:16.5224543Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md#handle-the-scope
+2025-12-26T19:21:16.5225086Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md
+2025-12-26T19:21:16.5225839Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Ecosystem.md
+2025-12-26T19:21:16.5226345Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/ContentTypeParser.md
+2025-12-26T19:21:16.5226913Z [EXCLUDED] https://mcollina.github.io/take-your-http-server-to-ludicrous-speed
+2025-12-26T19:21:16.5227435Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md
+2025-12-26T19:21:16.5227840Z [EXCLUDED] https://github.com/fastify/fastify-cli
+2025-12-26T19:21:16.5228167Z [EXCLUDED] https://github.com/delvedor
+2025-12-26T19:21:16.5228504Z [EXCLUDED] https://www.youtube.com/watch?v=5z46jJZNe8k
+2025-12-26T19:21:16.5229014Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md
+2025-12-26T19:21:16.5229630Z [EXCLUDED] https://delvedor.github.io/What-if-I-told-you-that-HTTP-can-be-fast
+2025-12-26T19:21:16.5230072Z [EXCLUDED] https://json-schema.org/
+2025-12-26T19:21:16.5230436Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Testing.md
+2025-12-26T19:21:16.5231193Z [EXCLUDED] https://www.webexpo.net/prague2017/talk/what-if-i-told-you-that-http-can-be-fast/
+2025-12-26T19:21:16.5231823Z [EXCLUDED] https://github.com/mcollina
+2025-12-26T19:21:16.5232171Z [EXCLUDED] https://github.com/fastify/fastify/pull/4216
+2025-12-26T19:21:16.5232559Z [EXCLUDED] https://github.com/fastify/fastify/pull/2700
+2025-12-26T19:21:16.5232934Z [EXCLUDED] https://github.com/fastify/fastify/pull/4485
+2025-12-26T19:21:16.5233305Z [EXCLUDED] https://github.com/fastify/fastify-swagger
+2025-12-26T19:21:16.5233690Z [EXCLUDED] https://github.com/fastify/fastify/pull/5567
+2025-12-26T19:21:16.5234057Z [EXCLUDED] https://github.com/fastify/fastify/pull/5419
+2025-12-26T19:21:16.5234421Z [EXCLUDED] https://github.com/sponsors/acro5piano
+2025-12-26T19:21:16.5234763Z [EXCLUDED] https://github.com/sponsors/Fdawgs
+2025-12-26T19:21:16.5235116Z [EXCLUDED] https://github.com/sponsors/EstebanDalelR
+2025-12-26T19:21:16.5235491Z [EXCLUDED] https://github.com/fastify/fastify/pull/2682
+2025-12-26T19:21:16.5235854Z [EXCLUDED] https://github.com/sponsors/kerolloz
+2025-12-26T19:21:16.5236234Z [EXCLUDED] https://github.com/fastify/fastify/pull/5032
+2025-12-26T19:21:16.5236598Z [EXCLUDED] https://github.com/sponsors/jsumners
+2025-12-26T19:21:16.5236959Z [EXCLUDED] https://github.com/fastify/fastify/pull/5252
+2025-12-26T19:21:16.5237328Z [EXCLUDED] https://github.com/fastify/fastify/pull/5462
+2025-12-26T19:21:16.5237689Z [EXCLUDED] https://github.com/sponsors/busybox11
+2025-12-26T19:21:16.5238053Z [EXCLUDED] https://github.com/fastify/fastify/pull/5084
+2025-12-26T19:21:16.5238480Z [EXCLUDED] https://github.com/fastify/fastify-type-provider-typebox
+2025-12-26T19:21:16.5238879Z [EXCLUDED] https://github.com/sponsors/H4ad
+2025-12-26T19:21:16.5239222Z [EXCLUDED] https://github.com/sponsors/miquelfire
+2025-12-26T19:21:16.5239779Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/docs/Reference/Hooks.md#diagnostics-channel-hooks
+2025-12-26T19:21:16.5240350Z [EXCLUDED] https://github.com/sponsors/10xLaCroixDrinker
+2025-12-26T19:21:16.5240717Z [EXCLUDED] https://github.com/sponsors/melroy89
+2025-12-26T19:21:16.5241188Z [EXCLUDED] https://github.com/sponsors/big-kahuna-burger
+2025-12-26T19:21:16.5241617Z [EXCLUDED] https://github.com/fastify/fluent-json-schema/issues/267
+2025-12-26T19:21:16.5242059Z [EXCLUDED] https://nodejs.org/api/diagnostics_channel.html
+2025-12-26T19:21:16.5242445Z [EXCLUDED] https://github.com/sponsors/davidcralph
+2025-12-26T19:21:16.5242821Z [EXCLUDED] https://github.com/fastify/fastify/issues/4682
+2025-12-26T19:21:16.5243376Z [EXCLUDED] https://github.com/fastify/fastify/pull/5616
+2025-12-26T19:21:16.5243733Z [EXCLUDED] https://github.com/sponsors/mcollina
+2025-12-26T19:21:16.5244075Z [EXCLUDED] https://github.com/sponsors/voxpelli
+2025-12-26T19:21:16.5244425Z [EXCLUDED] https://github.com/sponsors/dancastillo
+2025-12-26T19:21:16.5244816Z [EXCLUDED] https://www.rfc-editor.org/rfc/rfc3986#section-3.4
+2025-12-26T19:21:16.5245219Z [EXCLUDED] https://github.com/fastify/fastify/pull/5586
+2025-12-26T19:21:16.5245567Z [EXCLUDED] https://github.com/sponsors/Eomm
+2025-12-26T19:21:16.5245913Z [EXCLUDED] https://github.com/fastify/fastify/pull/4766
+2025-12-26T19:21:16.5246277Z [EXCLUDED] https://github.com/sponsors/Cadienvan
+2025-12-26T19:21:16.5246619Z [EXCLUDED] https://github.com/sponsors/RafaelGSS
+2025-12-26T19:21:16.5246980Z [EXCLUDED] https://github.com/fastify/fastify/pull/4470
+2025-12-26T19:21:16.5247350Z [EXCLUDED] https://github.com/sponsors/aaroncadillac
+2025-12-26T19:21:16.5247697Z [EXCLUDED] https://github.com/sponsors/muya
+2025-12-26T19:21:16.5248131Z [EXCLUDED] https://github.com/fastify/fastify-type-provider-json-schema-to-ts
+2025-12-26T19:21:16.5248586Z [EXCLUDED] https://github.com/sponsors/Uzlopak
+2025-12-26T19:21:16.5248916Z [EXCLUDED] https://github.com/sponsors/adrai
+2025-12-26T19:21:16.5249249Z [EXCLUDED] https://github.com/sponsors/metcoder95
+2025-12-26T19:21:16.5249611Z [EXCLUDED] https://github.com/fastify/fastify-plugin
+2025-12-26T19:21:16.5249980Z [EXCLUDED] https://github.com/fastify/fastify-mongodb
+2025-12-26T19:21:16.5250409Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md
+2025-12-26T19:21:16.5251048Z [EXCLUDED] https://github.com/fastify/point-of-view
+2025-12-26T19:21:16.5251568Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md#decorators
+2025-12-26T19:21:16.5252161Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md#handle-errors
+2025-12-26T19:21:16.5252744Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md#lets-start
+2025-12-26T19:21:16.5253330Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md#custom-errors
+2025-12-26T19:21:16.5253786Z [EXCLUDED] https://nodejs.org/api/esm.html
+2025-12-26T19:21:16.5254178Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md
+2025-12-26T19:21:16.5254840Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md#how-to-handle-encapsulation-and-distribution
+2025-12-26T19:21:16.5255649Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md#the-hitchhikers-guide-to-plugins
+2025-12-26T19:21:16.5256318Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md#esm-support
+2025-12-26T19:21:16.5256898Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md#distribution
+2025-12-26T19:21:16.5257457Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md#hooks
+2025-12-26T19:21:16.5257964Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Lifecycle.md
+2025-12-26T19:21:16.5258396Z [EXCLUDED] https://github.com/fastify/fastify-error
+2025-12-26T19:21:16.5258805Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md
+2025-12-26T19:21:16.5259201Z [EXCLUDED] https://github.com/mcollina/avvio
+2025-12-26T19:21:16.5259614Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onroute
+2025-12-26T19:21:16.5260147Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#routes-options
+2025-12-26T19:21:16.5260626Z [EXCLUDED] https://github.com/fastify/process-warning
+2025-12-26T19:21:16.5261208Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md#emit-warnings
+2025-12-26T19:21:16.5261779Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md#register
+2025-12-26T19:21:16.5262249Z [EXCLUDED] https://github.com/fastify/fastify#ecosystem
+2025-12-26T19:21:16.5262629Z [EXCLUDED] https://github.com/fastify/fastify-multipart
+2025-12-26T19:21:16.5263138Z [EXCLUDED] https://github.com/fastify/fastify-helmet
+2025-12-26T19:21:16.5263520Z [EXCLUDED] https://github.com/fastify/fastify-multipart
+2025-12-26T19:21:16.5263865Z [EXCLUDED] https://circleci.com/
+2025-12-26T19:21:16.5264181Z [EXCLUDED] https://github.com/fastify/fastify-cookie
+2025-12-26T19:21:16.5264612Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md
+2025-12-26T19:21:16.5265047Z [EXCLUDED] https://github.com/fastify/fastify-helmet
+2025-12-26T19:21:16.5265397Z [EXCLUDED] https://github.com/fastify/help
+2025-12-26T19:21:16.5265744Z [EXCLUDED] https://github.com/fastify/fastify-compress
+2025-12-26T19:21:16.5266124Z [EXCLUDED] https://github.com/fastify/point-of-view
+2025-12-26T19:21:16.5266475Z [EXCLUDED] https://opensource.org/licenses
+2025-12-26T19:21:16.5266788Z [EXCLUDED] https://nodejs.org/api/test.html
+2025-12-26T19:21:16.5267138Z [EXCLUDED] https://github.com/fastify/fastify-caching
+2025-12-26T19:21:16.5267504Z [EXCLUDED] https://choosealicense.com/licenses/mit/
+2025-12-26T19:21:16.5268074Z [EXCLUDED] https://github.com/fastify/fastify/issues?q=is%3Aissue+is%3Aopen+label%3A%22plugin+suggestion%22
+2025-12-26T19:21:16.5268632Z [EXCLUDED] https://github.com/fastify/under-pressure
+2025-12-26T19:21:16.5268974Z [EXCLUDED] https://standardjs.com/
+2025-12-26T19:21:16.5269278Z [EXCLUDED] https://github.com/dependabot
+2025-12-26T19:21:16.5269662Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Ecosystem.md
+2025-12-26T19:21:16.5270094Z [EXCLUDED] https://github.com/fastify/fastify#ecosystem
+2025-12-26T19:21:16.5270444Z [EXCLUDED] https://choosealicense.com/
+2025-12-26T19:21:16.5271064Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Testing.md#plugins
+2025-12-26T19:21:16.5271529Z [EXCLUDED] https://github.com/features/actions
+2025-12-26T19:21:16.5271894Z [EXCLUDED] https://github.com/fastify/fastify-mongodb
+2025-12-26T19:21:16.5272243Z [EXCLUDED] https://nodejs.org/api/test.html
+2025-12-26T19:21:16.5272595Z [EXCLUDED] https://github.com/fastify/light-my-request
+2025-12-26T19:21:16.5273034Z [EXCLUDED] https://nodejs.org/docs/latest-v18.x/api/globals.html#fetch
+2025-12-26T19:21:16.5273461Z [EXCLUDED] https://www.npmjs.com/package/supertest
+2025-12-26T19:21:16.5273893Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md
+2025-12-26T19:21:16.5274492Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Testing.md#benefits-of-using-fastifyinject
+2025-12-26T19:21:16.5275021Z [EXCLUDED] https://www.npmjs.com/package/undici
+2025-12-26T19:21:16.5275438Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/CONTRIBUTING.md
+2025-12-26T19:21:16.5275930Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md
+2025-12-26T19:21:16.5276383Z [EXCLUDED] https://fastify.dev/docs/latest/Reference/Hooks/
+2025-12-26T19:21:16.5276831Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Style-Guide.md#
+2025-12-26T19:21:16.5277311Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md
+2025-12-26T19:21:16.5277998Z [EXCLUDED] https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841
+2025-12-26T19:21:16.5278595Z [EXCLUDED] https://fastify.dev/contribute
+2025-12-26T19:21:16.5278997Z [EXCLUDED] https://cloud.google.com/functions/docs/quickstart-nodejs
+2025-12-26T19:21:16.5279494Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#streams
+2025-12-26T19:21:16.5279965Z [EXCLUDED] https://vercel.com/docs/functions/fluid-compute
+2025-12-26T19:21:16.5280441Z [EXCLUDED] https://github.com/fastify/fastify/issues/946#issuecomment-766319521
+2025-12-26T19:21:16.5281150Z [EXCLUDED] https://vercel.com/docs/functions/fluid-compute#how-to-enable-fluid-compute
+2025-12-26T19:21:16.5281751Z [EXCLUDED] https://viniciusl.com.br/serverless-adapter/docs/main/frameworks/fastify
+2025-12-26T19:21:16.5282292Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Serverless.md#aws
+2025-12-26T19:21:16.5282798Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Serverless.md#appjs
+2025-12-26T19:21:16.5283443Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Serverless.md#lambdajs
+2025-12-26T19:21:16.5283917Z [EXCLUDED] https://github.com/fastify/aws-lambda-fastify
+2025-12-26T19:21:16.5284371Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Serverless.md#vercel
+2025-12-26T19:21:16.5285006Z [EXCLUDED] https://github.com/lirantal/lemon-squeezy-firebase-webhook-fastify/blob/main/package.json
+2025-12-26T19:21:16.5285613Z [EXCLUDED] https://vercel.com/templates/backend/fastify-on-vercel
+2025-12-26T19:21:16.5286182Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Serverless.md#google-cloud-functions
+2025-12-26T19:21:16.5286852Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Serverless.md#google-firebase-functions
+2025-12-26T19:21:16.5287474Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Serverless.md#netlify-lambda
+2025-12-26T19:21:16.5288041Z [EXCLUDED] https://github.com/GoogleCloudPlatform/functions-framework-nodejs
+2025-12-26T19:21:16.5288581Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Serverless.md#genezio
+2025-12-26T19:21:16.5289103Z [EXCLUDED] https://cloud.google.com/run/docs/quickstarts/build-and-deploy
+2025-12-26T19:21:16.5289556Z [EXCLUDED] https://github.com/H4ad/serverless-adapter
+2025-12-26T19:21:16.5290016Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/ContentTypeParser.md
+2025-12-26T19:21:16.5290535Z [EXCLUDED] https://claudiajs.com/tutorials/serverless-express.html
+2025-12-26T19:21:16.5291019Z [EXCLUDED] https://vercel.com/
+2025-12-26T19:21:16.5291586Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Serverless.md#google-cloud-run
+2025-12-26T19:21:16.5292445Z [EXCLUDED] https://github.com/knative/docs/blob/2d654d1fd6311750cc57187a86253c52f273d924/docs/serving/samples/hello-world/helloworld-nodejs/Dockerfile
+2025-12-26T19:21:16.5293181Z [EXCLUDED] https://genezio.com/docs/frameworks/fastify/
+2025-12-26T19:21:16.5293532Z [EXCLUDED] https://genezio.com/
+2025-12-26T19:21:16.5294103Z [EXCLUDED] https://lirantal.com/blog/http-webhooks-firebase-functions-fastify-practical-case-study-lemon-squeezy
+2025-12-26T19:21:16.5294847Z [EXCLUDED] https://github.com/claudiajs/example-projects/tree/master/fastify-app-lambda
+2025-12-26T19:21:16.5295465Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/ContentTypeParser.md#catch-all
+2025-12-26T19:21:16.5295943Z [EXCLUDED] https://fastify.dev/ecosystem/
+2025-12-26T19:21:16.5296352Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/examples/parser.js
+2025-12-26T19:21:16.5296876Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#bodylimit
+2025-12-26T19:21:16.5297447Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#factory-body-limit
+2025-12-26T19:21:16.5297946Z [EXCLUDED] https://github.com/fastify/fastify-multipart
+2025-12-26T19:21:16.5298375Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md
+2025-12-26T19:21:16.5298762Z [EXCLUDED] https://jsonlines.org/
+2025-12-26T19:21:16.5299158Z [EXCLUDED] https://mimesniff.spec.whatwg.org/#mime-type-miscellaneous
+2025-12-26T19:21:16.5299668Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onrequest
+2025-12-26T19:21:16.5300238Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md#decorate-request
+2025-12-26T19:21:16.5300957Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md#decorate-reply
+2025-12-26T19:21:16.5301451Z [EXCLUDED] https://mathiasbynens.be/notes/shapes-ics
+2025-12-26T19:21:16.5301917Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md#decorate
+2025-12-26T19:21:16.5302434Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md
+2025-12-26T19:21:16.5302907Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md
+2025-12-26T19:21:16.5303365Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md
+2025-12-26T19:21:16.5303866Z [EXCLUDED] https://nodejs.org/api/diagnostics_channel.html#class-tracingchannel
+2025-12-26T19:21:16.5304536Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#preparsing
+2025-12-26T19:21:16.5305052Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onerror
+2025-12-26T19:21:16.5305567Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onlisten
+2025-12-26T19:21:16.5306214Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#using-hooks-to-inject-custom-properties
+2025-12-26T19:21:16.5306890Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#seterrorhandler
+2025-12-26T19:21:16.5307481Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#application-hooks
+2025-12-26T19:21:16.5307984Z [EXCLUDED] https://nodejs.org/api/diagnostics_channel.html
+2025-12-26T19:21:16.5308458Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#prehandler
+2025-12-26T19:21:16.5309049Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#manage-errors-from-a-hook
+2025-12-26T19:21:16.5309627Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Lifecycle.md
+2025-12-26T19:21:16.5310102Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md
+2025-12-26T19:21:16.5310608Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#prevalidation
+2025-12-26T19:21:16.5311277Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#preserialization
+2025-12-26T19:21:16.5311848Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#routes-options
+2025-12-26T19:21:16.5312508Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onready
+2025-12-26T19:21:16.5313031Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#errors
+2025-12-26T19:21:16.5313559Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onresponse
+2025-12-26T19:21:16.5314099Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#ontimeout
+2025-12-26T19:21:16.5314641Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onrequest
+2025-12-26T19:21:16.5315180Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onrequestabort
+2025-12-26T19:21:16.5315755Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#route-level-hooks
+2025-12-26T19:21:16.5316260Z [EXCLUDED] https://github.com/fastify/fastify/issues/4319
+2025-12-26T19:21:16.5316642Z [EXCLUDED] https://github.com/fastify/fastify-plugin
+2025-12-26T19:21:16.5317127Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#requestreply-hooks
+2025-12-26T19:21:16.5317692Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onclose
+2025-12-26T19:21:16.5318191Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#scope
+2025-12-26T19:21:16.5318796Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#respond-to-a-request-from-a-hook
+2025-12-26T19:21:16.5319416Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onregister
+2025-12-26T19:21:16.5319931Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md
+2025-12-26T19:21:16.5320425Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md
+2025-12-26T19:21:16.5321017Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onroute
+2025-12-26T19:21:16.5321538Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#preclose
+2025-12-26T19:21:16.5322245Z [EXCLUDED] https://github.com/fastify/fastify/blob/94ea67ef2d8dce8a955d510cd9081aabd036fa85/test/hooks-async.js#L269-L275
+2025-12-26T19:21:16.5323047Z [EXCLUDED] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+2025-12-26T19:21:16.5323666Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#bodylimit
+2025-12-26T19:21:16.5324166Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md
+2025-12-26T19:21:16.5324770Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onsend
+2025-12-26T19:21:16.5325346Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#diagnostics-channel-hooks
+2025-12-26T19:21:16.5325977Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Detecting-When-Clients-Abort.md
+2025-12-26T19:21:16.5326508Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md
+2025-12-26T19:21:16.5326902Z [EXCLUDED] https://github.com/nodejs/Release
+2025-12-26T19:21:16.5327276Z [EXCLUDED] https://docs.nodesource.com/docs/product_suite
+2025-12-26T19:21:16.5328025Z [EXCLUDED] https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
+2025-12-26T19:21:16.5328713Z [EXCLUDED] https://yarnpkg.com/
+2025-12-26T19:21:16.5329036Z [EXCLUDED] https://github.com/fastify/fastify/releases
+2025-12-26T19:21:16.5329376Z [EXCLUDED] https://semver.org/
+2025-12-26T19:21:16.5329937Z [EXCLUDED] https://www.herodevs.com/support/fastify-nes?utm_source=fastify&utm_medium=link&utm_campaign=eol_support_fastify
+2025-12-26T19:21:16.5330573Z [EXCLUDED] https://datatracker.ietf.org/doc/html/rfc7301
+2025-12-26T19:21:16.5331047Z [EXCLUDED] https://nodejs.org/api/http2.html
+2025-12-26T19:21:16.5331366Z [EXCLUDED] https://nodejs.org/api/http.html
+2025-12-26T19:21:16.5331832Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setreplyserializer
+2025-12-26T19:21:16.5332449Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setserializercompiler
+2025-12-26T19:21:16.5333162Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Type-Providers.md
+2025-12-26T19:21:16.5333661Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md
+2025-12-26T19:21:16.5334124Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md
+2025-12-26T19:21:16.5334550Z [EXCLUDED] https://github.com/fastify/fastify-plugin
+2025-12-26T19:21:16.5334963Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md
+2025-12-26T19:21:16.5335488Z [200] file:///home/runner/work/fastify/fastify/docs/resources/encapsulation_context.svg
+2025-12-26T19:21:16.5336026Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md
+2025-12-26T19:21:16.5336478Z [EXCLUDED] https://github.com/fastify/fastify-bearer-auth
+2025-12-26T19:21:16.5336845Z [EXCLUDED] https://github.com/helmetjs/helmet
+2025-12-26T19:21:16.5337194Z [EXCLUDED] https://github.com/fastify/fastify-cors
+2025-12-26T19:21:16.5337562Z [EXCLUDED] https://github.com/fastify/fastify-static
+2025-12-26T19:21:16.5337933Z [EXCLUDED] https://github.com/expressjs/serve-static
+2025-12-26T19:21:16.5338286Z [EXCLUDED] https://github.com/fastify/middie
+2025-12-26T19:21:16.5338689Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Plugins-Guide.md
+2025-12-26T19:21:16.5339203Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md#request
+2025-12-26T19:21:16.5339644Z [EXCLUDED] https://github.com/fastify/fastify-helmet
+2025-12-26T19:21:16.5339999Z [EXCLUDED] https://github.com/expressjs/cors
+2025-12-26T19:21:16.5340412Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#hooks
+2025-12-26T19:21:16.5340998Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#reply
+2025-12-26T19:21:16.5341448Z [EXCLUDED] https://github.com/fastify/fastify-express
+2025-12-26T19:21:16.5341867Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md
+2025-12-26T19:21:16.5342315Z [EXCLUDED] https://getpino.io/#/docs/api?id=opt-serializers
+2025-12-26T19:21:16.5342778Z [EXCLUDED] https://github.com/pinojs/pino/blob/master/docs/api.md#options
+2025-12-26T19:21:16.5343201Z [EXCLUDED] https://github.com/pinojs/pino
+2025-12-26T19:21:16.5343565Z [EXCLUDED] https://www.npmjs.com/package/abstract-logging
+2025-12-26T19:21:16.5344027Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#genreqid
+2025-12-26T19:21:16.5344624Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#factory-request-id-header
+2025-12-26T19:21:16.5345316Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md
+2025-12-26T19:21:16.5345791Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Lifecycle.md
+2025-12-26T19:21:16.5346181Z [EXCLUDED] https://getpino.io/
+2025-12-26T19:21:16.5346484Z [EXCLUDED] https://getpino.io/#/docs/redaction
+2025-12-26T19:21:16.5347003Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_rep_invalid_payload_type
+2025-12-26T19:21:16.5347717Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_rep_response_body_consumed
+2025-12-26T19:21:16.5348457Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ajv_custom_options_opt_not_arr
+2025-12-26T19:21:16.5349164Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_hook_invalid_handler
+2025-12-26T19:21:16.5349886Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_req_invalid_validation_invocation
+2025-12-26T19:21:16.5350631Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_rep_readable_stream_locked
+2025-12-26T19:21:16.5351472Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_plugin_invalid_async_handler
+2025-12-26T19:21:16.5352034Z [EXCLUDED] https://github.com/fastify/fastify/pull/2128
+2025-12-26T19:21:16.5352587Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_instance_already_started
+2025-12-26T19:21:16.5353146Z [EXCLUDED] https://github.com/fastify/fastify/pull/3653
+2025-12-26T19:21:16.5353643Z [EXCLUDED] https://github.com/fastify/fastify/pull/2954
+2025-12-26T19:21:16.5354194Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_log_invalid_logger_config
+2025-12-26T19:21:16.5354920Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_plugin_not_present_in_instance
+2025-12-26T19:21:16.5355624Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_already_present
+2025-12-26T19:21:16.5356263Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_hook_timeout
+2025-12-26T19:21:16.5356888Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_invalid_type
+2025-12-26T19:21:16.5357560Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_log_invalid_destination
+2025-12-26T19:21:16.5358235Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_log_invalid_logger
+2025-12-26T19:21:16.5358874Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fastify-error-codes
+2025-12-26T19:21:16.5359382Z [EXCLUDED] https://github.com/fastify/fastify/pull/3925
+2025-12-26T19:21:16.5359913Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_reopened_close_server
+2025-12-26T19:21:16.5360222Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_route_options_not_obj
+2025-12-26T19:21:16.5360435Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Middleware.md
+2025-12-26T19:21:16.5360684Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#uncaught-errors
+2025-12-26T19:21:16.5360959Z [EXCLUDED] https://github.com/fastify/fastify/pull/2014
+2025-12-26T19:21:16.5361244Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_duplicated_route
+2025-12-26T19:21:16.5361401Z [EXCLUDED] https://github.com/fastify/fastify/pull/1348
+2025-12-26T19:21:16.5361725Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_route_duplicated_handler
+2025-12-26T19:21:16.5361880Z [EXCLUDED] https://github.com/fastify/fastify/pull/5317
+2025-12-26T19:21:16.5362266Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_route_body_validation_schema_not_supported
+2025-12-26T19:21:16.5362485Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#errors
+2025-12-26T19:21:16.5362766Z [EXCLUDED] https://github.com/fastify/fastify/pull/4824
+2025-12-26T19:21:16.5363088Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_failed_error_serialization
+2025-12-26T19:21:16.5363361Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_empty_type
+2025-12-26T19:21:16.5363646Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_reopened_server
+2025-12-26T19:21:16.5363904Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_validation
+2025-12-26T19:21:16.5364060Z [EXCLUDED] https://github.com/fastify/fastify/pull/4520
+2025-12-26T19:21:16.5364402Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#catching-uncaught-errors-in-fastify
+2025-12-26T19:21:16.5364553Z [EXCLUDED] https://github.com/fastify/fastify/pull/4554
+2025-12-26T19:21:16.5364874Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_instance_already_listening
+2025-12-26T19:21:16.5365203Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_log_invalid_logger_instance
+2025-12-26T19:21:16.5365478Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_bad_status_code
+2025-12-26T19:21:16.5365777Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_route_rewrite_not_str
+2025-12-26T19:21:16.5366085Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_plugin_callback_not_fn
+2025-12-26T19:21:16.5366238Z [EXCLUDED] https://github.com/fastify/fastify/pull/2106
+2025-12-26T19:21:16.5366637Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_route_method_invalid
+2025-12-26T19:21:16.5366799Z [EXCLUDED] https://github.com/fastify/fastify/pull/4323
+2025-12-26T19:21:16.5367132Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_schema_error_formatter_not_fn
+2025-12-26T19:21:16.5367395Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#errors-in-fastify
+2025-12-26T19:21:16.5367690Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_sch_validation_build
+2025-12-26T19:21:16.5367988Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_error_handler_not_fn
+2025-12-26T19:21:16.5368142Z [EXCLUDED] https://github.com/fastify/fastify/pull/1954
+2025-12-26T19:21:16.5368389Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_bad_url
+2025-12-26T19:21:16.5368757Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_schema_controller_bucket_opt_not_fn
+2025-12-26T19:21:16.5369075Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_invalid_content_length
+2025-12-26T19:21:16.5369368Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_route_handler_not_fn
+2025-12-26T19:21:16.5369527Z [EXCLUDED] https://github.com/fastify/fastify/pull/5920
+2025-12-26T19:21:16.5369898Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_missing_contenttype_serialization_fn
+2025-12-26T19:21:16.5370052Z [EXCLUDED] https://github.com/fastify/fastify/pull/2082
+2025-12-26T19:21:16.5370337Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_options_not_obj
+2025-12-26T19:21:16.5370641Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_invalid_parse_type
+2025-12-26T19:21:16.5370884Z [EXCLUDED] https://github.com/fastify/fastify/pull/1253
+2025-12-26T19:21:16.5371117Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Encapsulation.md
+2025-12-26T19:21:16.5371560Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#errors-in-fastify-lifecycle-hooks-and-a-custom-error-handler
+2025-12-26T19:21:16.5371844Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_send_inside_onerr
+2025-12-26T19:21:16.5372276Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_plugin_version_mismatch
+2025-12-26T19:21:16.5372430Z [EXCLUDED] https://github.com/fastify/fastify/pull/2415
+2025-12-26T19:21:16.5372654Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#senddata
+2025-12-26T19:21:16.5372934Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_async_constraint
+2025-12-26T19:21:16.5373221Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_init_opts_invalid
+2025-12-26T19:21:16.5373505Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#error-handling-in-nodejs
+2025-12-26T19:21:16.5373732Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#bodylimit
+2025-12-26T19:21:16.5374026Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_dec_reference_type
+2025-12-26T19:21:16.5374179Z [EXCLUDED] https://github.com/fastify/fastify/pull/2023
+2025-12-26T19:21:16.5374470Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_body_too_large
+2025-12-26T19:21:16.5374627Z [EXCLUDED] https://github.com/fastify/fastify/pull/2549
+2025-12-26T19:21:16.5374776Z [EXCLUDED] https://github.com/fastify/fastify/pull/5020
+2025-12-26T19:21:16.5375097Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_sch_content_missing_schema
+2025-12-26T19:21:16.5375256Z [EXCLUDED] https://github.com/fastify/fastify/pull/4750
+2025-12-26T19:21:16.5375536Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#manage-errors-from-a-hook
+2025-12-26T19:21:16.5375946Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_rep_sent_value
+2025-12-26T19:21:16.5376250Z [EXCLUDED] https://nodejs.org/api/process.html#process_warning_using_uncaughtexception_correctly
+2025-12-26T19:21:16.5376553Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_invalid_json_body
+2025-12-26T19:21:16.5376830Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_bad_trailer_name
+2025-12-26T19:21:16.5376980Z [EXCLUDED] https://github.com/fastify/fastify/pull/3106
+2025-12-26T19:21:16.5377264Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_hook_invalid_type
+2025-12-26T19:21:16.5377543Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_bad_trailer_value
+2025-12-26T19:21:16.5377690Z [EXCLUDED] https://github.com/fastify/fastify/pull/
+2025-12-26T19:21:16.5377945Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#seterrorhandler
+2025-12-26T19:21:16.5378100Z [EXCLUDED] https://github.com/fastify/fastify/pull/1471
+2025-12-26T19:21:16.5378251Z [EXCLUDED] https://github.com/fastify/fastify/pull/4601
+2025-12-26T19:21:16.5378407Z [EXCLUDED] https://github.com/fastify/fastify/pull/4886
+2025-12-26T19:21:16.5378554Z [EXCLUDED] https://github.com/fastify/fastify/pull/3970
+2025-12-26T19:21:16.5378854Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_empty_json_body
+2025-12-26T19:21:16.5379160Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_dec_missing_dependency
+2025-12-26T19:21:16.5379351Z [EXCLUDED] https://nodejs.org/en/docs/guides/domain-postmortem/
+2025-12-26T19:21:16.5379701Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_route_body_limit_option_not_int
+2025-12-26T19:21:16.5379976Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_root_plg_booted
+2025-12-26T19:21:16.5380281Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_route_missing_handler
+2025-12-26T19:21:16.5380581Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_listen_options_invalid
+2025-12-26T19:21:16.5381031Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_sch_response_schema_not_nested_2xx
+2025-12-26T19:21:16.5381428Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_plugin_timeout
+2025-12-26T19:21:16.5381585Z [EXCLUDED] https://github.com/fastify/fastify/pull/5462
+2025-12-26T19:21:16.5381740Z [EXCLUDED] https://github.com/fastify/fastify/pull/5925
+2025-12-26T19:21:16.5381894Z [EXCLUDED] https://github.com/fastify/fastify/pull/1336
+2025-12-26T19:21:16.5382186Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_invalid_handler
+2025-12-26T19:21:16.5382455Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_dec_undeclared
+2025-12-26T19:21:16.5382749Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_send_undefined_err
+2025-12-26T19:21:16.5383078Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_dec_dependency_invalid_type
+2025-12-26T19:21:16.5383367Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_sch_already_present
+2025-12-26T19:21:16.5383654Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md
+2025-12-26T19:21:16.5383806Z [EXCLUDED] https://github.com/fastify/fastify/pull/1168
+2025-12-26T19:21:16.5384176Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_log_logger_and_logger_instance_provided
+2025-12-26T19:21:16.5384478Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#catching-errors-in-promises
+2025-12-26T19:21:16.5384628Z [EXCLUDED] https://github.com/fastify/fastify/pull/4264
+2025-12-26T19:21:16.5385115Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_force_close_connections_idle_not_available
+2025-12-26T19:21:16.5385393Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_dec_after_start
+2025-12-26T19:21:16.5385553Z [EXCLUDED] https://github.com/fastify/fastify/pull/2074
+2025-12-26T19:21:16.5385810Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_qsp_not_fn
+2025-12-26T19:21:16.5385969Z [EXCLUDED] https://github.com/fastify/fastify/pull/5141
+2025-12-26T19:21:16.5386278Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_invalid_media_type
+2025-12-26T19:21:16.5386431Z [EXCLUDED] https://github.com/fastify/fastify/pull/3090
+2025-12-26T19:21:16.5386686Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_not_found
+2025-12-26T19:21:16.5386952Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_invalid_url
+2025-12-26T19:21:16.5387231Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_plugin_not_valid
+2025-12-26T19:21:16.5387387Z [EXCLUDED] https://github.com/fastify/fastify/pull/5286
+2025-12-26T19:21:16.5387712Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_hook_invalid_async_handler
+2025-12-26T19:21:16.5388002Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_hook_not_supported
+2025-12-26T19:21:16.5388296Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_dec_already_present
+2025-12-26T19:21:16.5388452Z [EXCLUDED] https://github.com/fastify/fastify/pull/4367
+2025-12-26T19:21:16.5388600Z [EXCLUDED] https://github.com/fastify/fastify/pull/3794
+2025-12-26T19:21:16.5388934Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ajv_custom_options_opt_not_obj
+2025-12-26T19:21:16.5389245Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_missing_serialization_fn
+2025-12-26T19:21:16.5389529Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_rep_already_sent
+2025-12-26T19:21:16.5389827Z [EXCLUDED] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
+2025-12-26T19:21:16.5390123Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_parent_plugin_booted
+2025-12-26T19:21:16.5390282Z [EXCLUDED] https://github.com/fastify/fastify/pull/6098
+2025-12-26T19:21:16.5390674Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_sch_serialization_build
+2025-12-26T19:21:16.5391044Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#errors-in-input-data
+2025-12-26T19:21:16.5391368Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_error_handler_already_set
+2025-12-26T19:21:16.5391686Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_route_method_not_supported
+2025-12-26T19:21:16.5391956Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_sch_missing_id
+2025-12-26T19:21:16.5392234Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_sch_duplicate
+2025-12-26T19:21:16.5392521Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_missing_middleware
+2025-12-26T19:21:16.5392707Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/LTS.md
+2025-12-26T19:21:16.5392906Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md
+2025-12-26T19:21:16.5393090Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md
+2025-12-26T19:21:16.5393289Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Lifecycle.md
+2025-12-26T19:21:16.5393487Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md
+2025-12-26T19:21:16.5393762Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md
+2025-12-26T19:21:16.5393954Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md
+2025-12-26T19:21:16.5394271Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Middleware.md
+2025-12-26T19:21:16.5394486Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md
+2025-12-26T19:21:16.5394721Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/ContentTypeParser.md
+2025-12-26T19:21:16.5394921Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md
+2025-12-26T19:21:16.5395121Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md
+2025-12-26T19:21:16.5395307Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/HTTP2.md
+2025-12-26T19:21:16.5395502Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md
+2025-12-26T19:21:16.5395710Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md
+2025-12-26T19:21:16.5395927Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Encapsulation.md
+2025-12-26T19:21:16.5396124Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Warnings.md
+2025-12-26T19:21:16.5396247Z [EXCLUDED] https://semver.org/
+2025-12-26T19:21:16.5396486Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Index.md#reference-toc
+2025-12-26T19:21:16.5396680Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Logging.md
+2025-12-26T19:21:16.5396916Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#async-await
+2025-12-26T19:21:16.5397157Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#callnotfound
+2025-12-26T19:21:16.5397403Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#removetrailerkey
+2025-12-26T19:21:16.5397568Z [EXCLUDED] https://github.com/fastify/fastify/issues/1864
+2025-12-26T19:21:16.5397786Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#hijack
+2025-12-26T19:21:16.5398004Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#senddata
+2025-12-26T19:21:16.5398245Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#codestatuscode
+2025-12-26T19:21:16.5398496Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#removeheaderkey
+2025-12-26T19:21:16.5398893Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#serializeinputdata-schema--httpstatus-httpstatus
+2025-12-26T19:21:16.5399117Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#getheaders
+2025-12-26T19:21:16.5399436Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#send
+2025-12-26T19:21:16.5399673Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#hasheaderkey
+2025-12-26T19:21:16.5399911Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#readablestream
+2025-12-26T19:21:16.5400142Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#elapsedtime
+2025-12-26T19:21:16.5400421Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#thenfulfilled-rejected
+2025-12-26T19:21:16.5400653Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#introduction
+2025-12-26T19:21:16.5401021Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#set-not-found-handler
+2025-12-26T19:21:16.5401241Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#buffers
+2025-12-26T19:21:16.5401580Z [EXCLUDED] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
+2025-12-26T19:21:16.5401799Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#objects
+2025-12-26T19:21:16.5402118Z [EXCLUDED] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
+2025-12-26T19:21:16.5402342Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#statuscode
+2025-12-26T19:21:16.5402645Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#writeearlyhintshints-callback
+2025-12-26T19:21:16.5403012Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#getserializationfunctionschema--httpstatus
+2025-12-26T19:21:16.5403248Z [EXCLUDED] https://npm.im/http-errors
+2025-12-26T19:21:16.5403465Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onsend
+2025-12-26T19:21:16.5403687Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Encapsulation.md
+2025-12-26T19:21:16.5403949Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#redirectdest--code
+2025-12-26T19:21:16.5404239Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#type-of-the-final-payload
+2025-12-26T19:21:16.5404478Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#getheaderkey
+2025-12-26T19:21:16.5404715Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#hastrailerkey
+2025-12-26T19:21:16.5404957Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#headerkey-value
+2025-12-26T19:21:16.5405167Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#server
+2025-12-26T19:21:16.5405420Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#typecontenttype
+2025-12-26T19:21:16.5405711Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#compileserializationschema
+2025-12-26T19:21:16.5406081Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#compileserializationschemaschema-httpstatus
+2025-12-26T19:21:16.5406369Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#async-await-and-promises
+2025-12-26T19:21:16.5406690Z [EXCLUDED] https://nodejs.org/dist/latest-v20.x/docs/api/http.html#http_response_setheader_name_value
+2025-12-26T19:21:16.5406873Z [EXCLUDED] https://www.npmjs.com/package/fast-json-stringify
+2025-12-26T19:21:16.5407087Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#sent
+2025-12-26T19:21:16.5407334Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#seterrorhandler
+2025-12-26T19:21:16.5407594Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#trailerkey-function
+2025-12-26T19:21:16.5407804Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#raw
+2025-12-26T19:21:16.5408021Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#strings
+2025-12-26T19:21:16.5408178Z [EXCLUDED] https://github.com/fastify/fastify-sensible
+2025-12-26T19:21:16.5408442Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Lifecycle.md#reply-lifecycle
+2025-12-26T19:21:16.5408758Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#reply
+2025-12-26T19:21:16.5408998Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#serializerfunc
+2025-12-26T19:21:16.5409229Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#typedarrays
+2025-12-26T19:21:16.5409385Z [EXCLUDED] https://www.npmjs.com/package/encodeurl
+2025-12-26T19:21:16.5409602Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#response
+2025-12-26T19:21:16.5409855Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#headersobject
+2025-12-26T19:21:16.5410070Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#errors
+2025-12-26T19:21:16.5410366Z [EXCLUDED] https://nodejs.org/dist/latest-v20.x/docs/api/http.html#http_class_http_serverresponse
+2025-12-26T19:21:16.5410581Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#streams
+2025-12-26T19:21:16.5410944Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setnotfoundhandler
+2025-12-26T19:21:16.5411129Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/LTS.md
+2025-12-26T19:21:16.5411387Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#querystringparser
+2025-12-26T19:21:16.5411616Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md#validate
+2025-12-26T19:21:16.5411836Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md#headers
+2025-12-26T19:21:16.5412212Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#factory-trust-proxy
+2025-12-26T19:21:16.5412467Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#routes-options
+2025-12-26T19:21:16.5412754Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md#compileValidationSchema
+2025-12-26T19:21:16.5413029Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md#getvalidationfunction
+2025-12-26T19:21:16.5413315Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md#compilevalidationschema
+2025-12-26T19:21:16.5413533Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Encapsulation.md
+2025-12-26T19:21:16.5413772Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#routes-config
+2025-12-26T19:21:16.5414032Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#schema-controller
+2025-12-26T19:21:16.5414272Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/ContentTypeParser.md
+2025-12-26T19:21:16.5414401Z [EXCLUDED] https://nodejs.org/api/esm.html
+2025-12-26T19:21:16.5414557Z [EXCLUDED] https://github.com/fastify/fastify-plugin
+2025-12-26T19:21:16.5414771Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md
+2025-12-26T19:21:16.5415022Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#route-prefixing
+2025-12-26T19:21:16.5415197Z [EXCLUDED] https://github.com/mcollina/avvio#error-handling
+2025-12-26T19:21:16.5415491Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md#route-prefixing-option
+2025-12-26T19:21:16.5415743Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#custom-log-level
+2025-12-26T19:21:16.5415987Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#fastify-plugin
+2025-12-26T19:21:16.5416263Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#custom-log-serializer
+2025-12-26T19:21:16.5416551Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Getting-Started.md#your-first-plugin
+2025-12-26T19:21:16.5416757Z [EXCLUDED] https://github.com/turkerdev/fastify-type-provider-zod
+2025-12-26T19:21:16.5416980Z [EXCLUDED] https://sinclairzx81.github.io/typebox/#/docs/overview/2_setup
+2025-12-26T19:21:16.5417230Z [EXCLUDED] https://github.com/fastify/fastify-type-provider-json-schema-to-ts
+2025-12-26T19:21:16.5417442Z [EXCLUDED] https://github.com/fastify/fastify-type-provider-typebox
+2025-12-26T19:21:16.5417702Z [EXCLUDED] https://github.com/sinclairzx81/typebox
+2025-12-26T19:21:16.5417893Z [EXCLUDED] https://github.com/ThomasAribart/json-schema-to-ts
+2025-12-26T19:21:16.5418024Z [EXCLUDED] https://github.com/colinhacks/zod
+2025-12-26T19:21:16.5418242Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onerror
+2025-12-26T19:21:16.5418514Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setnotfoundhandler
+2025-12-26T19:21:16.5418761Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#route-prefixing
+2025-12-26T19:21:16.5418988Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#ontimeout
+2025-12-26T19:21:16.5419262Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setchildloggerfactory
+2025-12-26T19:21:16.5419514Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#host-constraints
+2025-12-26T19:21:16.5419746Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#async-await
+2025-12-26T19:21:16.5419863Z [EXCLUDED] https://semver.org/
+2025-12-26T19:21:16.5420053Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md
+2025-12-26T19:21:16.5420320Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#shorthand-declaration
+2025-12-26T19:21:16.5420465Z [EXCLUDED] https://github.com/delvedor/find-my-way
+2025-12-26T19:21:16.5420725Z [EXCLUDED] https://github.com/pinojs/pino/blob/master/docs/api.md#serializers-object
+2025-12-26T19:21:16.5421051Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#constraints
+2025-12-26T19:21:16.5421421Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#url-building
+2025-12-26T19:21:16.5421807Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#handling-of--route-inside-prefixed-plugins
+2025-12-26T19:21:16.5422030Z [EXCLUDED] https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary
+2025-12-26T19:21:16.5422296Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#promise-resolution
+2025-12-26T19:21:16.5422521Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onrequest
+2025-12-26T19:21:16.5422714Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md
+2025-12-26T19:21:16.5422940Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#prehandler
+2025-12-26T19:21:16.5423164Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#onresponse
+2025-12-26T19:21:16.5423439Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#custom-log-serializer
+2025-12-26T19:21:16.5423564Z [EXCLUDED] https://json-schema.org/
+2025-12-26T19:21:16.5423826Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#childloggerfactory
+2025-12-26T19:21:16.5423982Z [EXCLUDED] https://github.com/fastify/fastify-plugin
+2025-12-26T19:21:16.5424248Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#version-constraints
+2025-12-26T19:21:16.5424495Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#routes-options
+2025-12-26T19:21:16.5424744Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#preserialization
+2025-12-26T19:21:16.5424985Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#seterrorhandler
+2025-12-26T19:21:16.5425182Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md
+2025-12-26T19:21:16.5425464Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md
+2025-12-26T19:21:16.5425716Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#custom-log-level
+2025-12-26T19:21:16.5426040Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#respond-to-a-request-from-a-hook
+2025-12-26T19:21:16.5426387Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md#error-handling
+2025-12-26T19:21:16.5426577Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md
+2025-12-26T19:21:16.5426940Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#exposeHeadRoutes
+2025-12-26T19:21:16.5427172Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#constraints
+2025-12-26T19:21:16.5427422Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#full-declaration
+2025-12-26T19:21:16.5427637Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md#config
+2025-12-26T19:21:16.5427863Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#preparsing
+2025-12-26T19:21:16.5428223Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md#schema-serializer
+2025-12-26T19:21:16.5428454Z [EXCLUDED] https://github.com/pinojs/pino/blob/master/docs/api.md#level-string
+2025-12-26T19:21:16.5428601Z [EXCLUDED] https://ajv.js.org/api.html#error-objects
+2025-12-26T19:21:16.5428842Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#prevalidation
+2025-12-26T19:21:16.5429074Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#route-hooks
+2025-12-26T19:21:16.5429420Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md#schema-validator
+2025-12-26T19:21:16.5429663Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#addHttpMethod
+2025-12-26T19:21:16.5429885Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#bodylimit
+2025-12-26T19:21:16.5430090Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Decorators.md
+2025-12-26T19:21:16.5430435Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#ignoretrailingslash
+2025-12-26T19:21:16.5430662Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#getschemas
+2025-12-26T19:21:16.5430997Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#serializeropts
+2025-12-26T19:21:16.5431269Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setvalidatorcompiler
+2025-12-26T19:21:16.5431569Z [EXCLUDED] https://nodejs.org/dist/latest-v18.x/docs/api/http.html#servercloseidleconnections
+2025-12-26T19:21:16.5431774Z [EXCLUDED] https://tc39.es/proposal-explicit-resource-management
+2025-12-26T19:21:16.5432043Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#getdefaultjsonparser
+2025-12-26T19:21:16.5432283Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#errorhandler
+2025-12-26T19:21:16.5432575Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#allowerrorhandleroverride
+2025-12-26T19:21:16.5432777Z [EXCLUDED] https://github.com/fastify/fast-json-stringify#options
+2025-12-26T19:21:16.5433062Z [EXCLUDED] https://nodejs.org/dist/latest/docs/api/http.html#http_server_maxrequestspersocket
+2025-12-26T19:21:16.5433335Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md
+2025-12-26T19:21:16.5433605Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Logging.md#logging-request-id
+2025-12-26T19:21:16.5433975Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md#schemaerrorformatter
+2025-12-26T19:21:16.5434235Z [EXCLUDED] https://github.com/delvedor/find-my-way?tab=readme-ov-file#findmywayoptions
+2025-12-26T19:21:16.5434411Z [EXCLUDED] https://github.com/fastify/secure-json-parse#api
+2025-12-26T19:21:16.5434626Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#http
+2025-12-26T19:21:16.5434883Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#return503onclosing
+2025-12-26T19:21:16.5435131Z [EXCLUDED] https://nodejs.org/api/http2.html#http2sessionsettimeoutmsecs-callback
+2025-12-26T19:21:16.5435401Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#hascontenttypeparser
+2025-12-26T19:21:16.5435535Z [EXCLUDED] https://npm.im/abstract-logging
+2025-12-26T19:21:16.5435800Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#set-reply-serializer
+2025-12-26T19:21:16.5436137Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#addhook
+2025-12-26T19:21:16.5436360Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#on-close
+2025-12-26T19:21:16.5436604Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#requesttimeout
+2025-12-26T19:21:16.5436870Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#maxrequestspersocket
+2025-12-26T19:21:16.5437134Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#serializercompiler
+2025-12-26T19:21:16.5437377Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#loggerInstance
+2025-12-26T19:21:16.5437641Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#http2sessiontimeout
+2025-12-26T19:21:16.5437891Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#seterrorhandler
+2025-12-26T19:21:16.5438152Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#symbolasyncdispose
+2025-12-26T19:21:16.5438524Z [EXCLUDED] https://nodejs.org/dist/latest-v20.x/docs/api/https.html#https_https_createserver_options_requestlistener
+2025-12-26T19:21:16.5438761Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#trustproxy
+2025-12-26T19:21:16.5439025Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#addcontenttypeparser
+2025-12-26T19:21:16.5439299Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#ignoreduplicateslashes
+2025-12-26T19:21:16.5439682Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#clienterrorhandler
+2025-12-26T19:21:16.5439927Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#routeroptions
+2025-12-26T19:21:16.5440213Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md#route-prefixing-option
+2025-12-26T19:21:16.5440460Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#frameworkerrors
+2025-12-26T19:21:16.5440693Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#onbadurl
+2025-12-26T19:21:16.5441016Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#hasplugin
+2025-12-26T19:21:16.5441271Z [EXCLUDED] https://devblogs.microsoft.com/typescript/announcing-typescript-5-2/
+2025-12-26T19:21:16.5441587Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Testing.md#benefits-of-using-fastifyinject
+2025-12-26T19:21:16.5441810Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#hasroute
+2025-12-26T19:21:16.5442071Z [EXCLUDED] https://nodejs.org/dist/latest/docs/api/http.html#http_server_requesttimeout
+2025-12-26T19:21:16.5442316Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#addHttpMethod
+2025-12-26T19:21:16.5442526Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#close
+2025-12-26T19:21:16.5442742Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#factory
+2025-12-26T19:21:16.5442973Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#genreqid
+2025-12-26T19:21:16.5443214Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#printplugins
+2025-12-26T19:21:16.5443425Z [EXCLUDED] https://nodejs.org/api/http.html#http_server_keepalivetimeout
+2025-12-26T19:21:16.5443609Z [EXCLUDED] https://github.com/delvedor/find-my-way/issues/76
+2025-12-26T19:21:16.5443801Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Logging.md
+2025-12-26T19:21:16.5444063Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setnotfoundhandler
+2025-12-26T19:21:16.5444256Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Routes.md
+2025-12-26T19:21:16.5444411Z [EXCLUDED] https://github.com/fastify/fastify-plugin
+2025-12-26T19:21:16.5444620Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#ready
+2025-12-26T19:21:16.5444840Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#addresses
+2025-12-26T19:21:16.5445205Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#initialconfig
+2025-12-26T19:21:16.5445446Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#serializerfunc
+2025-12-26T19:21:16.5445703Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#querystringparser
+2025-12-26T19:21:16.5445949Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#server-methods
+2025-12-26T19:21:16.5446143Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md
+2025-12-26T19:21:16.5446498Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md#schema-validator
+2025-12-26T19:21:16.5446753Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#onprotopoisoning
+2025-12-26T19:21:16.5447042Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Errors.md#fst_err_ctp_body_too_large
+2025-12-26T19:21:16.5447278Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setGenReqId
+2025-12-26T19:21:16.5447534Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#requestidloglabel
+2025-12-26T19:21:16.5447744Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#after
+2025-12-26T19:21:16.5447977Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#constraints
+2025-12-26T19:21:16.5448228Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#validatorcompiler
+2025-12-26T19:21:16.5448620Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#schemacontroller
+2025-12-26T19:21:16.5448977Z [EXCLUDED] https://web.archive.org/web/20170831174611/https://snyk.io/blog/mongodb-hack-and-secure-defaults/
+2025-12-26T19:21:16.5449228Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#allowunsaferegex
+2025-12-26T19:21:16.5449440Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#route
+2025-12-26T19:21:16.5449670Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#rewriteurl
+2025-12-26T19:21:16.5449909Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#maxparamlength
+2025-12-26T19:21:16.5450160Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#keepalivetimeout
+2025-12-26T19:21:16.5450407Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#buildprettymeta
+2025-12-26T19:21:16.5450623Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#version
+2025-12-26T19:21:16.5450947Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#addschema
+2025-12-26T19:21:16.5451171Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#getschema
+2025-12-26T19:21:16.5451435Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#factory-https
+2025-12-26T19:21:16.5451660Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#instance
+2025-12-26T19:21:16.5451830Z [EXCLUDED] https://github.com/fastify/ajv-compiler#usage
+2025-12-26T19:21:16.5452086Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Plugins.md#handle-the-scope
+2025-12-26T19:21:16.5452271Z [EXCLUDED] https://nodejs.org/api/http.html#http_server_timeout
+2025-12-26T19:21:16.5452526Z [EXCLUDED] https://nodejs.org/dist/latest-v16.x/docs/api/net.html#socketdestroyerror
+2025-12-26T19:21:16.5452753Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#pluginname
+2025-12-26T19:21:16.5452991Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#plugintimeout
+2025-12-26T19:21:16.5453212Z [EXCLUDED] https://nodejs.org/api/net.html#serverlistenoptions-callback
+2025-12-26T19:21:16.5453519Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#factory-return-503-on-closing
+2025-12-26T19:21:16.5453765Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#listeningorigin
+2025-12-26T19:21:16.5454084Z [EXCLUDED] https://nodejs.org/api/http.html#http_class_http_server
+2025-12-26T19:21:16.5454244Z [EXCLUDED] https://nodejs.org/api/http.html#httpmethods
+2025-12-26T19:21:16.5454476Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#add-schema
+2025-12-26T19:21:16.5454734Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/ContentTypeParser.md#usage
+2025-12-26T19:21:16.5455005Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#disablerequestlogging
+2025-12-26T19:21:16.5455273Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#schemaerrorformatter
+2025-12-26T19:21:16.5455508Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Prototype-Poisoning.md
+2025-12-26T19:21:16.5455760Z [EXCLUDED] https://nodejs.org/api/net.html#serverlistenport-host-backlog-callback
+2025-12-26T19:21:16.5455969Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#ajv
+2025-12-26T19:21:16.5456242Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setserializercompiler
+2025-12-26T19:21:16.5456490Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#serverfactory
+2025-12-26T19:21:16.5456708Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#decorate
+2025-12-26T19:21:16.5456941Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#printroutes
+2025-12-26T19:21:16.5457207Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#connectiontimeout
+2025-12-26T19:21:16.5457479Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#addconstraintstrategy
+2025-12-26T19:21:16.5457801Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#register
+2025-12-26T19:21:16.5458049Z [EXCLUDED] https://github.com/pinojs/pino/blob/c77d8ec5ce/docs/API.md#constructor
+2025-12-26T19:21:16.5458277Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#route-hooks
+2025-12-26T19:21:16.5458517Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#casesensitive
+2025-12-26T19:21:16.5458805Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#onconstructorpoisoning
+2025-12-26T19:21:16.5459075Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#hasconstraintstrategy
+2025-12-26T19:21:16.5459217Z [EXCLUDED] https://www.npmjs.com/package/avvio
+2025-12-26T19:21:16.5459499Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setschemaerrorformatter
+2025-12-26T19:21:16.5459808Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#removeallcontenttypeparsers
+2025-12-26T19:21:16.5460050Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#call-not-found
+2025-12-26T19:21:16.5460328Z [EXCLUDED] https://nodejs.org/dist/latest-v18.x/docs/api/http.html#servercloseallconnections
+2025-12-26T19:21:16.5460480Z [EXCLUDED] https://github.com/delvedor/find-my-way
+2025-12-26T19:21:16.5460751Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#forcecloseconnections
+2025-12-26T19:21:16.5461057Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#log
+2025-12-26T19:21:16.5461261Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Request.md
+2025-12-26T19:21:16.5461525Z [EXCLUDED] https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS
+2025-12-26T19:21:16.5461768Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#requestidheader
+2025-12-26T19:21:16.5462016Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#factory-http2
+2025-12-26T19:21:16.5462231Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#http2
+2025-12-26T19:21:16.5462390Z [EXCLUDED] https://github.com/anonrig/fast-querystring
+2025-12-26T19:21:16.5462560Z [EXCLUDED] https://github.com/fastify/secure-json-parse
+2025-12-26T19:21:16.5462942Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md#preparsing
+2025-12-26T19:21:16.5463440Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#defaulttextparser
+2025-12-26T19:21:16.5463819Z [EXCLUDED] https://nodejs.org/docs/latest-v20.x/api/http.html#httpcreateserveroptions-requestlistener
+2025-12-26T19:21:16.5464098Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Lifecycle.md#lifecycle
+2025-12-26T19:21:16.5464442Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setchildloggerfactory
+2025-12-26T19:21:16.5464675Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#listen
+2025-12-26T19:21:16.5464993Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#server
+2025-12-26T19:21:16.5465309Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#findroute
+2025-12-26T19:21:16.5465704Z [EXCLUDED] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Defining_functions
+2025-12-26T19:21:16.5465876Z [EXCLUDED] https://github.com/mcollina/hyperid
+2025-12-26T19:21:16.5466215Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#childloggerfactory
+2025-12-26T19:21:16.5466414Z [EXCLUDED] https://www.npmjs.com/package/@fastify/proxy-addr
+2025-12-26T19:21:16.5466712Z [EXCLUDED] https://datatracker.ietf.org/doc/html/rfc3986#section-6.2.2.1
+2025-12-26T19:21:16.5466960Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md
+2025-12-26T19:21:16.5467269Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#defaultroute
+2025-12-26T19:21:16.5467512Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#inject
+2025-12-26T19:21:16.5467660Z [EXCLUDED] https://getpino.io/
+2025-12-26T19:21:16.5468079Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#exposeheadroutes
+2025-12-26T19:21:16.5468440Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#usesemicolondelimiter
+2025-12-26T19:21:16.5468747Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#routing
+2025-12-26T19:21:16.5469025Z [EXCLUDED] https://nodejs.org/dist/latest-v20.x/docs/api/http2.html
+2025-12-26T19:21:16.5469253Z [EXCLUDED] https://nodejs.org/api/http.html#http_event_clienterror
+2025-12-26T19:21:16.5469558Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#set-not-found-handler
+2025-12-26T19:21:16.5469872Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#setreplyserializer
+2025-12-26T19:21:16.5470167Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#prefix
+2025-12-26T19:21:16.5470425Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#https
+2025-12-26T19:21:16.5470708Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#logger
+2025-12-26T19:21:16.5471203Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#removecontenttypeparser
+2025-12-26T19:21:16.5471599Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md#schema-serializer
+2025-12-26T19:21:16.5471793Z [EXCLUDED] https://www.npmjs.com/package/qs
+2025-12-26T19:21:16.5472103Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#register
+2025-12-26T19:21:16.5472328Z [EXCLUDED] https://github.com/pinojs/pino/issues
+2025-12-26T19:21:16.5472684Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifyloggeroptions
+2025-12-26T19:21:16.5473006Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#json-schema
+2025-12-26T19:21:16.5473309Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#learn-by-example
+2025-12-26T19:21:16.5473564Z [EXCLUDED] https://github.com/fastify/fastify-swagger/blob/main/index.d.ts
+2025-12-26T19:21:16.5473896Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/request.d.ts#L4
+2025-12-26T19:21:16.5474171Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/utils.d.ts#L27
+2025-12-26T19:21:16.5474487Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md
+2025-12-26T19:21:16.5474838Z [EXCLUDED] https://www.npmjs.com/package/npm-check
+2025-12-26T19:21:16.5475099Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/route.d.ts#93
+2025-12-26T19:21:16.5475359Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Type-Providers.md
+2025-12-26T19:21:16.5475712Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/utils.d.ts#L13
+2025-12-26T19:21:16.5483085Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#rawbody
+2025-12-26T19:21:16.5483389Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/fastify.d.ts#L184
+2025-12-26T19:21:16.5483710Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/content-type-parser.d.ts#L17
+2025-12-26T19:21:16.5483949Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/hooks.d.ts#L154
+2025-12-26T19:21:16.5484363Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyrawrequestdefaultexpressionrawserver
+2025-12-26T19:21:16.5484857Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifypluginoptions-rawserver-rawrequest-requestgeneric
+2025-12-26T19:21:16.5485098Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/register.d.ts#L16
+2025-12-26T19:21:16.5485495Z [EXCLUDED] https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-3.html#generic-parameter-defaults
+2025-12-26T19:21:16.5485735Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#logger
+2025-12-26T19:21:16.5486351Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifyrequestrawserver-rawrequest-requestgeneric
+2025-12-26T19:21:16.5486588Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/fastify.d.ts#L29
+2025-12-26T19:21:16.5486842Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#generics
+2025-12-26T19:21:16.5487069Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/logger.d.ts#L7
+2025-12-26T19:21:16.5487283Z [EXCLUDED] https://github.com/fastify/fastify-type-provider-typebox
+2025-12-26T19:21:16.5487692Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifyserveroptions-rawserver-logger
+2025-12-26T19:21:16.5487921Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/route.d.ts#L105
+2025-12-26T19:21:16.5488100Z [EXCLUDED] https://www.npmjs.com/package/json-schema-to-ts
+2025-12-26T19:21:16.5488537Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifyreplyrawserver-rawreply-contextconfig
+2025-12-26T19:21:16.5488759Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/hooks.d.ts#L94
+2025-12-26T19:21:16.5489042Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/content-type-parser.d.ts#L63
+2025-12-26T19:21:16.5489639Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyrawserver-rawrequest-rawreply-loggeropts-fastifyserveroptions-fastifyinstance
+2025-12-26T19:21:16.5489864Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/hooks.d.ts#L191
+2025-12-26T19:21:16.5490072Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/fastify.d.ts#L179
+2025-12-26T19:21:16.5490249Z [EXCLUDED] https://www.npmjs.com/package/@sinclair/typebox
+2025-12-26T19:21:16.5490397Z [EXCLUDED] https://www.npmjs.com/package/depcheck
+2025-12-26T19:21:16.5490617Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/hooks.d.ts#L35
+2025-12-26T19:21:16.5490745Z [EXCLUDED] https://github.com/fastify/help/
+2025-12-26T19:21:16.5491099Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/hooks.d.ts#L174
+2025-12-26T19:21:16.5491340Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/register.d.ts#L9
+2025-12-26T19:21:16.5491567Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/hooks.d.ts#L70
+2025-12-26T19:21:16.5491800Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/utils.d.ts#L23
+2025-12-26T19:21:16.5491998Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/HTTP2.md
+2025-12-26T19:21:16.5492338Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/fastify.d.ts#L19
+2025-12-26T19:21:16.5492622Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/content-type-parser.d.ts#L7
+2025-12-26T19:21:16.5492840Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/hooks.d.ts#L17
+2025-12-26T19:21:16.5493127Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyhttpmethods
+2025-12-26T19:21:16.5493331Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Logging.md
+2025-12-26T19:21:16.5493586Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#rawserver
+2025-12-26T19:21:16.5493763Z [EXCLUDED] https://github.com/fastify/fastify/issues/3284
+2025-12-26T19:21:16.5494006Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/plugin.d.ts#L29
+2025-12-26T19:21:16.5494218Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/CONTRIBUTING.md
+2025-12-26T19:21:16.5494443Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/route.d.ts#L78
+2025-12-26T19:21:16.5494802Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyrawreplydefaultexpression
+2025-12-26T19:21:16.5494927Z [EXCLUDED] https://getpino.io/#/
+2025-12-26T19:21:16.5495149Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/logger.d.ts#L12
+2025-12-26T19:21:16.5495710Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyrouteoptionsrawserver-rawrequest-rawreply-requestgeneric-contextconfig
+2025-12-26T19:21:16.5496113Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#ContextConfigGeneric
+2025-12-26T19:21:16.5496276Z [EXCLUDED] https://github.com/fastify/fastify-plugin
+2025-12-26T19:21:16.5496608Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyrequestgenericinterface
+2025-12-26T19:21:16.5496807Z [EXCLUDED] https://github.com/tsconfig/bases#node-14-tsconfigjson
+2025-12-26T19:21:16.5497057Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#rawreply
+2025-12-26T19:21:16.5497253Z [EXCLUDED] https://code.visualstudio.com/docs/editor/intellisense
+2025-12-26T19:21:16.5497491Z [EXCLUDED] https://github.com/fastify/fastify-type-provider-json-schema-to-ts
+2025-12-26T19:21:16.5497710Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/utils.d.ts#L8
+2025-12-26T19:21:16.5497999Z [EXCLUDED] https://www.typescriptlang.org/docs/handbook/2/generics.html#generic-constraints
+2025-12-26T19:21:16.5498248Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#rawrequest
+2025-12-26T19:21:16.5498415Z [EXCLUDED] https://eslint.org/docs/rules/no-unused-vars
+2025-12-26T19:21:16.5498856Z [EXCLUDED] https://dev.to/ethanarrowood/is-declaration-merging-and-generic-inheritance-at-the-same-time-impossible-53cp
+2025-12-26T19:21:16.5499078Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/utils.d.ts#L18
+2025-12-26T19:21:16.5499414Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifypluginoptions
+2025-12-26T19:21:16.5499634Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/plugin.d.ts#L9
+2025-12-26T19:21:16.5499970Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifytregisteroptions
+2025-12-26T19:21:16.5500242Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyloglevel
+2025-12-26T19:21:16.5500375Z [EXCLUDED] https://github.com/fastify/fastify
+2025-12-26T19:21:16.5500573Z [EXCLUDED] https://github.com/turkerdev/fastify-type-provider-zod
+2025-12-26T19:21:16.5500952Z [EXCLUDED] https://www.typescriptlang.org/docs/handbook/declaration-merging.html
+2025-12-26T19:21:16.5501211Z [EXCLUDED] https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html
+2025-12-26T19:21:16.5501429Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/route.d.ts#12
+2025-12-26T19:21:16.5501651Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/route.d.ts#55
+2025-12-26T19:21:16.5502063Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifyerror
+2025-12-26T19:21:16.5502292Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/request.d.ts#L15
+2025-12-26T19:21:16.5502513Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/hooks.d.ts#L114
+2025-12-26T19:21:16.5502748Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/context.d.ts#L11
+2025-12-26T19:21:16.5502967Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/plugin.d.ts#L20
+2025-12-26T19:21:16.5503248Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/content-type-parser.d.ts#L46
+2025-12-26T19:21:16.5503469Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/hooks.d.ts#L53
+2025-12-26T19:21:16.5503686Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/hooks.d.ts#L134
+2025-12-26T19:21:16.5503926Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#plugins
+2025-12-26T19:21:16.5504285Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#example-5-specifying-logger-types
+2025-12-26T19:21:16.5504506Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/logger.d.ts#L17
+2025-12-26T19:21:16.5504720Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/hooks.d.ts#L206
+2025-12-26T19:21:16.5505021Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifyinstance
+2025-12-26T19:21:16.5505831Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifyregisterrawserver-rawrequest-requestgenericplugin-fastifyplugin-opts-fastifyregisteroptions
+2025-12-26T19:21:16.5506142Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyrawserverdefault
+2025-12-26T19:21:16.5506413Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#getting-started
+2025-12-26T19:21:16.5506644Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/instance.d.ts#L16
+2025-12-26T19:21:16.5506864Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/reply.d.ts#L32
+2025-12-26T19:21:16.5507226Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifyplugincallbackoptions
+2025-12-26T19:21:16.5507447Z [EXCLUDED] https://github.com/fastify/fastify/blob/main/types/plugin.d.ts#L31
+2025-12-26T19:21:16.5507788Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/TypeScript.md#fastifyfastifypluginasyncoptions
+2025-12-26T19:21:16.5507972Z [EXCLUDED] https://www.npmjs.com/package/fast-json-stringify
+2025-12-26T19:21:16.5508397Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Validation-and-Serialization.md#using-other-validation-libraries
+2025-12-26T19:21:16.5508645Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#seterrorhandler
+2025-12-26T19:21:16.5508772Z [EXCLUDED] https://github.com/jquense/yup/
+2025-12-26T19:21:16.5509024Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Reply.md#serializerfunc
+2025-12-26T19:21:16.5509167Z [EXCLUDED] https://github.com/epoberezkin/ajv-i18n
+2025-12-26T19:21:16.5509335Z [EXCLUDED] https://github.com/fastify/fast-json-stringify
+2025-12-26T19:21:16.5509571Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#factory-ajv
+2025-12-26T19:21:16.5509690Z [EXCLUDED] https://github.com/hapijs/joi/
+2025-12-26T19:21:16.5510005Z [EXCLUDED] https://github.com/fastify/example/blob/HEAD/validation-messages/custom-errors-messages.js
+2025-12-26T19:21:16.5510212Z [EXCLUDED] https://json-schema.org/understanding-json-schema/about
+2025-12-26T19:21:16.5510434Z [EXCLUDED] https://github.com/fastify/example/tree/main/validation-messages
+2025-12-26T19:21:16.5510560Z [EXCLUDED] https://ajv.js.org/coercion.html
+2025-12-26T19:21:16.5510689Z [EXCLUDED] https://www.npmjs.com/package/ajv
+2025-12-26T19:21:16.5511071Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#ajv
+2025-12-26T19:21:16.5511316Z [EXCLUDED] https://npm.im/ajv
+2025-12-26T19:21:16.5511519Z [EXCLUDED] https://github.com/fastify/ajv-compiler#ajv-configuration
+2025-12-26T19:21:16.5511756Z [EXCLUDED] https://tools.ietf.org/html/draft-handrews-json-schema-01#section-8
+2025-12-26T19:21:16.5511906Z [EXCLUDED] https://github.com/epoberezkin/ajv-errors
+2025-12-26T19:21:16.5512095Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Hooks.md
+2025-12-26T19:21:16.5512207Z [EXCLUDED] https://ajv.js.org/
+2025-12-26T19:21:16.5512410Z [EXCLUDED] https://json-schema.org/specification-links.html#draft-7
+2025-12-26T19:21:16.5512602Z [EXCLUDED] https://github.com/epoberezkin/ajv/blob/master/README.md
+2025-12-26T19:21:16.5512858Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Server.md#schema-controller
+2025-12-26T19:21:16.5513028Z [EXCLUDED] https://ajv.js.org/guide/async-validation.html
+2025-12-26T19:21:16.5513146Z [EXCLUDED] https://json-schema.org/
+2025-12-26T19:21:16.5513279Z [EXCLUDED] https://npm.im/fast-json-stringify
+2025-12-26T19:21:16.5513588Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Warnings.md#fastify-deprecation-codes
+2025-12-26T19:21:16.5513745Z [EXCLUDED] https://github.com/fastify/fastify/pull/5139
+2025-12-26T19:21:16.5513924Z [EXCLUDED] https://nodejs.org/api/cli.html#--no-deprecation
+2025-12-26T19:21:16.5514205Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Warnings.md#warnings-in-fastify
+2025-12-26T19:21:16.5514438Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Warnings.md#FSTWRN002
+2025-12-26T19:21:16.5514603Z [EXCLUDED] https://nodejs.org/api/cli.html#--trace-warnings
+2025-12-26T19:21:16.5514868Z [EXCLUDED] https://github.com/fastify/fastify/pull/4647
+2025-12-26T19:21:16.5515048Z [EXCLUDED] https://nodejs.org/api/process.html#event-warning
+2025-12-26T19:21:16.5515278Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Warnings.md#FSTWRN001
+2025-12-26T19:21:16.5515400Z [EXCLUDED] https://nodejs.org/api/cli.html
+2025-12-26T19:21:16.5515589Z [EXCLUDED] https://nodejs.org/api/cli.html#--trace-deprecation
+2025-12-26T19:21:16.5515822Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Warnings.md#FSTDEP022
+2025-12-26T19:21:16.5516104Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Warnings.md#fastify-warning-codes
+2025-12-26T19:21:16.5516265Z [EXCLUDED] https://github.com/fastify/fastify/pull/5985
+2025-12-26T19:21:16.5516491Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Warnings.md#warnings
+2025-12-26T19:21:16.5516667Z [EXCLUDED] https://nodejs.org/api/cli.html#--throw-deprecation
+2025-12-26T19:21:16.5516857Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/LTS.md
+2025-12-26T19:21:16.5517069Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Getting-Started.md
+2025-12-26T19:21:16.5517250Z [200] file:///home/runner/work/fastify/fastify/docs/Guides/Index.md
+2025-12-26T19:21:16.5517439Z [200] file:///home/runner/work/fastify/fastify/docs/Reference/Index.md
+2025-12-26T19:21:16.5517532Z # Summary
+2025-12-26T19:21:16.5517542Z 
+2025-12-26T19:21:16.5517640Z | Status         | Count |
+2025-12-26T19:21:16.5517736Z |----------------|-------|
+2025-12-26T19:21:16.5518037Z | 🔍 Total       | 1610  |
+2025-12-26T19:21:16.5518178Z | ✅ Successful  | 614   |
+2025-12-26T19:21:16.5518331Z | ⏳ Timeouts    | 0     |
+2025-12-26T19:21:16.5518456Z | 🔀 Redirected  | 0     |
+2025-12-26T19:21:16.5518575Z | 👻 Excluded    | 996   |
+2025-12-26T19:21:16.5518690Z | ❓ Unknown     | 0     |
+2025-12-26T19:21:16.5518805Z | 🚫 Errors      | 0     |
+2025-12-26T19:21:16.5518931Z | ⛔ Unsupported | 0     |
+2025-12-26T19:21:16.5518940Z 
+2025-12-26T19:21:16.5642026Z Post job cleanup.
+2025-12-26T19:21:16.6394265Z [command]/usr/bin/git version
+2025-12-26T19:21:16.6428388Z git version 2.52.0
+2025-12-26T19:21:16.6465632Z Temporarily overriding HOME='/home/runner/work/_temp/1091e25b-2069-496f-b541-5d37a946c059' before making global git config changes
+2025-12-26T19:21:16.6466389Z Adding repository directory to the temporary git global config as a safe directory
+2025-12-26T19:21:16.6471598Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/fastify/fastify
+2025-12-26T19:21:16.6507006Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-12-26T19:21:16.6540167Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-12-26T19:21:16.6759739Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-12-26T19:21:16.6789446Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-12-26T19:21:16.7002923Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-12-26T19:21:16.7063555Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-12-26T19:21:16.7379755Z Cleaning up orphan processes

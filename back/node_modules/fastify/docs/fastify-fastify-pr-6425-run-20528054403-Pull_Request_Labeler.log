@@ -1,0 +1,42 @@
+Getting logs for all jobs in run 20528054403...
+
+=== Job: label (ID: 58974851536) ===
+﻿2025-12-26T19:21:14.0762663Z Current runner version: '2.330.0'
+2025-12-26T19:21:14.0787926Z ##[group]Runner Image Provisioner
+2025-12-26T19:21:14.0788691Z Hosted Compute Agent
+2025-12-26T19:21:14.0789240Z Version: 20251211.462
+2025-12-26T19:21:14.0789871Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
+2025-12-26T19:21:14.0790577Z Build Date: 2025-12-11T16:28:49Z
+2025-12-26T19:21:14.0791177Z Worker ID: {0189303c-da8b-462e-b698-a97499c6a6fc}
+2025-12-26T19:21:14.0791893Z ##[endgroup]
+2025-12-26T19:21:14.0792424Z ##[group]Operating System
+2025-12-26T19:21:14.0793097Z Ubuntu
+2025-12-26T19:21:14.0793619Z 24.04.3
+2025-12-26T19:21:14.0794051Z LTS
+2025-12-26T19:21:14.0794497Z ##[endgroup]
+2025-12-26T19:21:14.0794970Z ##[group]Runner Image
+2025-12-26T19:21:14.0795571Z Image: ubuntu-24.04
+2025-12-26T19:21:14.0796035Z Version: 20251215.174.1
+2025-12-26T19:21:14.0797032Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251215.174/images/ubuntu/Ubuntu2404-Readme.md
+2025-12-26T19:21:14.0798617Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251215.174
+2025-12-26T19:21:14.0799648Z ##[endgroup]
+2025-12-26T19:21:14.0800735Z ##[group]GITHUB_TOKEN Permissions
+2025-12-26T19:21:14.0803059Z Contents: read
+2025-12-26T19:21:14.0803864Z Metadata: read
+2025-12-26T19:21:14.0804382Z PullRequests: write
+2025-12-26T19:21:14.0804862Z ##[endgroup]
+2025-12-26T19:21:14.0807516Z Secret source: Actions
+2025-12-26T19:21:14.0808411Z Prepare workflow directory
+2025-12-26T19:21:14.1164737Z Prepare all required actions
+2025-12-26T19:21:14.1204553Z Getting action download info
+2025-12-26T19:21:14.4404628Z Download action repository 'actions/labeler@v6' (SHA:634933edcd8ababfe52f92936142cc22ac488b1b)
+2025-12-26T19:21:15.2546418Z Complete job name: label
+2025-12-26T19:21:15.3230225Z ##[group]Run actions/labeler@v6
+2025-12-26T19:21:15.3231147Z with:
+2025-12-26T19:21:15.3231824Z   repo-token: ***
+2025-12-26T19:21:15.3232320Z   configuration-path: .github/labeler.yml
+2025-12-26T19:21:15.3233227Z   sync-labels: false
+2025-12-26T19:21:15.3233800Z   dot: true
+2025-12-26T19:21:15.3234541Z ##[endgroup]
+2025-12-26T19:21:16.1612713Z The configuration file (path: .github/labeler.yml) was not found locally, fetching via the api
+2025-12-26T19:21:16.9157400Z Cleaning up orphan processes
