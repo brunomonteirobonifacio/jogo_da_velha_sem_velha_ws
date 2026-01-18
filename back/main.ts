@@ -44,7 +44,7 @@ io.on("connection", socket => {
 
 function joinRoom(socket: Socket, roomId: string, player: Player) {
   socket.join(roomId);
-  io.to(roomId).emit("joined", player);
+  socket.emit("joined", player);
   console.log(`O jogador [${player.id}] entrou na sala ${roomId} como ${player.symbol}`);
 }
 
