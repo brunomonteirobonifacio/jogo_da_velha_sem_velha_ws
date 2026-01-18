@@ -24,6 +24,10 @@ socket.on("connect", () => {
     updateBoard(state.board);
     updateCurrentPlayerSymbolDisplay(state.currentPlayer);
     checkVictory(state);
+  });
+
+  socket.on("error", error => {
+    alert(error.message);
   })
 });
 

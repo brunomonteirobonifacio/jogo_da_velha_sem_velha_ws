@@ -28,16 +28,20 @@ io.on("connection", socket => {
   socket.on("makeMove", event => {
     const { room, player, position } = event;
 
-    const session = sessionByRoom.get(room.name)
-    if (session == null) {
-      throw new Error("vai toma no cu");
-    }
-
     try {
-      session.makeMove(player.id, position)
-      io.to(room.name).emit("update", session.getGameState())
-    } catch (err) {
-      console.error(err)
+      const session = sessionByRoom.get(room.name);
+      if (session == null) {
+        throw new Error("Sessão não existe");
+      }
+
+      session.makeMove(player.id, position);
+      io.to(room.name).emit("update", session.getGameState());
+    } catch (err: any) {
+      socket.emit("error", {
+        message: err.message
+      });
+
+      console.error(err);
     }
   });
 
