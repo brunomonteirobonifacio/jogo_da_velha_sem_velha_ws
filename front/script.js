@@ -1,22 +1,31 @@
 import { io } from "https://cdn.socket.io/4.8.1/socket.io.esm.min.js";
 
-let playerId = localStorage.getItem("playerId");
+let playerId = localStorage.getItem("playerId") ?? "";
 let player;
-const roomId = "sala1";
+
+const queryParams = new URLSearchParams(location.search);
+let roomId = queryParams.get("room") ?? "";
 
 const socket = io("http://localhost:3000", {
   query: {
-    playerId: playerId ?? ""
+    playerId
   }
-})
+});
 
 socket.on("connect", () => {
   socket.emit("joinRoom", { name: roomId });
 
-  socket.on("joined", playerJoined => {
-    player = playerJoined;
-    playerId = playerJoined.id
+  socket.on("joined", event => {
+    player = event.player;
+    playerId = player.id
 
+    if (roomId != event.room.name) {
+      roomId = event.room.name;
+      
+      queryParams.set("room", roomId);
+      location.search = queryParams.toString();
+    }
+      
     setPlayerSymbolDisplay();
   });
 

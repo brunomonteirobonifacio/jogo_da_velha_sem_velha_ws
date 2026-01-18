@@ -12,9 +12,13 @@ const io = new Server({
 const sessionByRoom: Map<string, Session> = new Map();
 
 io.on("connection", socket => {
-  let playerId = socket.handshake.query.playerId as string || randomUUID()
+  let playerId = socket.handshake.query.playerId as string || randomUUID();
 
   socket.on("joinRoom", room => {
+    if (!room.name) {
+      room.name = randomUUID();
+    }
+
     let session = findOrCreateSession(room.name);
 
     let player = session.getPlayerById(playerId);
@@ -61,7 +65,7 @@ function findOrCreateSession(roomId: string): Session {
 
 function joinRoom(socket: Socket, session: Session, roomId: string, player: Player) {
   socket.join(roomId);
-  socket.emit("joined", player);
+  socket.emit("joined", { player: player, room: { name: roomId }});
   socket.emit("update", session.getGameState());
   console.log(`O jogador [${player.id}] entrou na sala ${roomId} como ${player.symbol}`);
 }
