@@ -1,4 +1,4 @@
-enum State {
+enum Status {
   STARTED,
   FINISHED
 }
@@ -15,7 +15,7 @@ class Game {
 
   currentPlayer: string = players.X;
   winner: string | null = null;
-  state = State.STARTED;
+  status = Status.STARTED;
   latestMoves: Array<number> = [];
 
   public makeMove(position: number): void {
@@ -26,7 +26,7 @@ class Game {
     this.preventDraw(position);
 
     if (this.checkVictory()) {
-      this.state = State.FINISHED;
+      this.status = Status.FINISHED;
       this.winner = this.currentPlayer;
       return;
     }
@@ -35,7 +35,7 @@ class Game {
   }
 
   private checkValidGameState(): void {
-    if (this.state === State.FINISHED) {
+    if (this.status === Status.FINISHED) {
       throw new Error('O jogo já terminou lek');
     }
   }
@@ -91,8 +91,8 @@ class Game {
     return this.winner;
   }
 
-  public getState(): State {
-    return this.state;
+  public getStatusDescription(): string {
+    return this.status === Status.STARTED ? "STARTED" : "FINISHED";
   }
 }
 
@@ -232,8 +232,9 @@ export class Session {
   public getGameState() {
     return {
       board: this.board.getPositionsMatrix(),
-      state: this.game.getState(),
-      currentPlayer: this.game.getCurrentPlayer()
+      status: this.game.getStatusDescription(),
+      currentPlayer: this.game.getCurrentPlayer(),
+      winner: this.game.getWinner()
     };
   }
 }

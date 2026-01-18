@@ -23,6 +23,7 @@ socket.on("connect", () => {
   socket.on("update", state => {
     updateBoard(state.board);
     updateCurrentPlayerSymbolDisplay(state.currentPlayer);
+    checkVictory(state);
   })
 });
 
@@ -59,7 +60,10 @@ function updateCurrentPlayerSymbolDisplay(currentPlayerSymbol) {
 }
 
 function checkVictory(state) {
-  
+  console.log(state);
+  if (state.status === "FINISHED") {
+    alert(`Fim de jogo! Jogador ${state.winner} venceu!`);
+  }
 }
 
 init();
