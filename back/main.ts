@@ -1,6 +1,7 @@
 import { Server, Socket } from "socket.io";
 import { randomUUID } from "node:crypto"
-import { Player, Session } from "./game";
+import { Session } from "./models/session";
+import { Player } from "./types/player"
 
 const io = new Server({
   cors: {
