@@ -97,16 +97,12 @@ class Game {
 }
 
 class Board {
-  private readonly EMPTY_POSITION = '';
-
-  constructor() {
-
-  }
+  private static readonly EMPTY_POSITION = '';
   
   private readonly positions: Array<Array<string>> = [
-    [this.EMPTY_POSITION, this.EMPTY_POSITION, this.EMPTY_POSITION],
-    [this.EMPTY_POSITION, this.EMPTY_POSITION, this.EMPTY_POSITION],
-    [this.EMPTY_POSITION, this.EMPTY_POSITION, this.EMPTY_POSITION]
+    [Board.EMPTY_POSITION, Board.EMPTY_POSITION, Board.EMPTY_POSITION],
+    [Board.EMPTY_POSITION, Board.EMPTY_POSITION, Board.EMPTY_POSITION],
+    [Board.EMPTY_POSITION, Board.EMPTY_POSITION, Board.EMPTY_POSITION]
   ]
 
   public get(position: number): string {
@@ -150,7 +146,7 @@ class Board {
   }
 
   public isPositionAvailable(position: number): boolean {
-    return this.get(position) == this.EMPTY_POSITION;
+    return this.get(position) == Board.EMPTY_POSITION;
   }
 
   public isPositionFilled(position: number): boolean {
@@ -167,15 +163,16 @@ class Board {
     }
 
     const { row, column } = this.toCoordinates(position);
-    this.positions[row][column] = this.EMPTY_POSITION;
+    this.positions[row][column] = Board.EMPTY_POSITION;
   }
 
   public countAvailablePositions(): number {
     let availablePositions = 0;
+    
     this.positions.forEach(line => {
-      const availablePositionsLine = line.filter(pos => pos === this.EMPTY_POSITION).length;
+      const availablePositionsLine = line.filter(pos => pos === Board.EMPTY_POSITION).length;
       availablePositions += availablePositionsLine;
-    })
+    });
 
     return availablePositions;
   }
