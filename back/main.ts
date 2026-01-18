@@ -18,10 +18,10 @@ io.on("connection", socket => {
 
     let player = session.getPlayerById(playerId);
     if (player != null){
-      joinRoom(socket, room.name, player);
+      joinRoom(socket, session, room.name, player);
     } else if (!session.isFull()) {
       player = session.addPlayer(playerId);
-      joinRoom(socket, room.name, player);
+      joinRoom(socket, session, room.name, player);
     }
   });
 
@@ -54,9 +54,10 @@ function findOrCreateSession(roomId: string): Session {
   return session;
 }
 
-function joinRoom(socket: Socket, roomId: string, player: Player) {
+function joinRoom(socket: Socket, session: Session, roomId: string, player: Player) {
   socket.join(roomId);
   socket.emit("joined", player);
+  socket.emit("update", session.getGameState());
   console.log(`O jogador [${player.id}] entrou na sala ${roomId} como ${player.symbol}`);
 }
 
